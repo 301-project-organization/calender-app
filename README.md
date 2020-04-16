@@ -9,7 +9,7 @@
 
 ## Wireframes:
 
-![](/images/layout.png)
+![](/images/layout.PNG)
 
 ## Domain modeling:
 
@@ -17,4 +17,4 @@
 
 ## Database Entity-Relationship-Diagram:
 
-![](/images/diagram.png)
+![](/images/diagram.jpg)
