@@ -1,0 +1,250 @@
+
+/* This is header */
+header{
+    font-family: 'Anton', sans-serif;
+    width: 100%;
+    height: 37.828947368421055vh;
+    margin: 0 auto;
+    margin-bottom:3.289473684210526vh;
+    position: absolute;
+    z-index: 6;
+    left: 0;
+    top: 0;
+    background:  url("https://lh3.googleusercontent.com/proxy/5RZpaOx54k2ciLntKic-imynk3b5PbkWy7gXrC9HcWYaTSdQgzf0G-WKhtyO71lEmURlXpOdr6ZnYXRa9h620P_a1aQZk2P-BDA1sN-3uSqJO_OZxlJYD7I") 0 0 no-repeat;
+    background-size: cover;
+}
+
+header div h1{
+    font-size: 225%;
+    color: rgb(255, 9, 9);
+    margin-left: 2%;
+    letter-spacing:3px;
+}
+
+header nav ul{
+     margin-left: 3.6603221083455346vw;
+}
+
+header nav ul li{
+    display:inline-block;
+    list-style-type: none;
+    margin-top: 3.5%;
+    margin-left: 2%;
+}
+
+header nav ul li a{
+    margin-right: 0.7320644216691069vw;
+    color: rgb(189, 149, 21);
+    font-size: 1.5rem;
+    text-decoration: blink;
+    letter-spacing: 0.7320644216691069vw;
+    font-family: sans-serif;
+    display: inline;
+}
+
+header nav ul li a:hover{
+    color:cornsilk ;
+    background:text green ;
+    background-color: darkgreen;
+    box-shadow: 0 0 9px darkgreen, 0 0 35px  darkgreen, 0 0 75px darkgreen;
+    transition-delay: 0.1s;
+}
+
+
+.logo{
+    width: 46.603221083455345vw;
+    height: 16.44736842105263vh;
+    float: left;
+    margin-left: -3.6603221083455346vw;
+    margin-top: 1.644736842105263vh;
+    font-size: 1.0980966325036603vw;
+}
+
+/*menu*/
+
+#menuToggle
+{
+  display: block;
+  position: fixed;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-left: 95.1683748169839vw;
+  margin-top: -27.960526315789473vh;
+}
+
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: rgb(74, 116, 12);
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px green, 0 0 40px green, 0 0 50px green, 0 0 60px green, 0 0 70px green;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px darkgreen, 0 0 40px darkgreen, 0 0 50px darkgreen, 0 0 60px darkgreen, 0 0 70px darkgreen, 0 0 80px darkgreen;
+    }
+  }
+
+#menuToggle input{
+  display: block;
+  width: 2.9282576866764276vw;
+  height: 5.2631578947368425vh;
+  position: absolute;
+  top: -1.1513157894736843vh;
+  left: -0.36603221083455345vw;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2; 
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span{
+  display: block;
+  width: 2.4158125915080526vw;
+  height: 0.6578947368421053vh;
+  margin-bottom: 0.8223684210526315vh;
+  position: relative;
+  background: yellowgreen;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: darkgreen;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu{
+  position: absolute;
+  width: 21.961932650073205vw;
+  margin: 50% 0 0 -54.904831625183014vw;
+  padding: 8.223684210526315vh  3.6603221083455346vw;
+  padding-top: 8.223684210526315vh;
+  background: black;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(0, -10000%);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  border-radius: 20%;
+  border: 3px solid green;
+}
+
+
+
+#menu li
+{
+  padding: 1.644736842105263vh 0;
+  font-size: 1.5rem;
+  text-align: center;
+  display: block;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+.logoArea{
+    width: 80%;
+    height: 16.44736842105263vh;
+    margin: 1.644736842105263vh 0.7320644216691069vw ;
+}
+
+#newLogo{
+    width: 25%;
+    height: 36.18421052631579vh;
+    float: left;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+.svg {
+    font: 5.5em 'Montserrat';
+    width: 100%;
+    height: 100%;
+    margin-left: 5.856515373352855vw;
+    margin-top:  3.289473684210526vh;
+}
+
+.text-copy {
+    fill:none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 2px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: rgb(31, 78, 24);
+    animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: rgb(209, 196, 14);
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: rgb(12, 199, 37);
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: rgb(189, 149, 21);
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: rgb(236, 224, 57);
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
