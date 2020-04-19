@@ -14,6 +14,8 @@ const methodOverride = require('method-override'); // To be able to use update a
 const client = new pg.Client(process.env.DATABASE_URL);
 client.on('error', (err) => console.log(err));
 
+
+
 // Setting up the view engine and the pages
 app.set('view engine','ejs');
 app.use(express.urlencoded({ extended: true }));

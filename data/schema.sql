@@ -7,4 +7,5 @@ CREATE TABLE holidays (
   date VARCHAR(255),
   type VARCHAR(255),
   picture_url VARCHAR(255)
-)
+);
+
