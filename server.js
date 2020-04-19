@@ -22,17 +22,18 @@ app.use(methodOverride('_method'));
 // To get the CSS and JS frontend files
 app.use(express.static('./public'))
 
+
+// Functions handlers 
+const mainPageHandler = require('./modules/home.js');
+
+
+
 // Routes
 app.get('/',mainPageHandler)
 
 // Last route for non existing pages
 app.get('*',notFoundHandler);
 
-// Functions handlers for the paths
-
-function mainPageHandler(req,res){
-  res.render('./pages/index');
-}
 
 function errorHandler (error,request,response){
   response.status(500).send('SORRY AN ERROR OCCURED '+ error);
