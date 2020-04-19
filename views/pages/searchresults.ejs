@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('./layout/head')%>
+    <title>Holiday Search Results</title>
+    <link rel="stylesheet" href="./css/sr.css">
+</head>
+<body>
+    <p>this is the holiday results</p>
+    <main>
+        <section>
+            <% shownHolidayData.forEach (value=>{%>
+                <div class='results'>
+                    <p>Holiday's Name: <%=value.name%></p>
+                    <img src="<%=value.pic%>" alt="">
+                    <p>Country: <%=value.country%></p>
+                    <p>Description: <%=value.description%></p>
+                    <p>Date: <%=value.date%></p>
+                    <p>Type of holiday: <%=value.type%></p>
+                    <form action="" method="POST">
+                        <input type="hidden" name="name" value="<%=value.name%>">
+                        <input type="hidden" name="country" value="<%=value.country%>">
+                        <input type="hidden" name="description" value="<%=value.description%>">
+                        <input type="hidden" name="date" value="<%=value.date%>">
+                        <input type="hidden" name="type" value="<%=value.type%>">
+                        <button>Add To Reminders</button>
+                    </form>
+                </div>
+            <%})%>
+        </section>
+    </main>
+</body>
+</html>
