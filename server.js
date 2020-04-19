@@ -33,13 +33,13 @@ app.get('*',notFoundHandler);
 
 // Functions handlers for the paths
 
-function mainPageHandler(req,res){
-  res.render('./pages/index');
-}
+// function mainPageHandler(req,res){
+//   res.render('./pages/index');
+// }
 
 
-function errorHandler (error,request,response){
-  response.status(500).send('SORRY AN ERROR OCCURED '+ error);
+function errorHandler (err,req,res){
+  res.status(500).send('SORRY AN ERROR OCCURED '+ err);
 }
 function notFoundHandler (req,res){
   res.status(404).send('Error 404: URL Not found');
@@ -53,4 +53,4 @@ app.use(errorHandler);
 
 client.connect().then(() => {
   app.listen(PORT, () => console.log(`Server is up and running on port ${PORT}`));
-}).catch(err=> errorHandler(err,request,response));
+});
