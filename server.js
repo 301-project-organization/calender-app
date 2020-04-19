@@ -25,11 +25,12 @@ app.use(express.static('./public'))
 
 // Functions handlers 
 const mainPageHandler = require('./modules/home.js');
-
+const aboutPageHandler = require('./modules/about.js');
 
 
 // Routes
 app.get('/',mainPageHandler)
+app.get('/about',aboutPageHandler)
 
 // Last route for non existing pages
 app.get('*',notFoundHandler);
