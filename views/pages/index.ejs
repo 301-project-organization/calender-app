@@ -8,11 +8,21 @@
     <header>
         <%-include('./layout/header')%>
     </header>
-    <p>This is the index page</p>
+    <main>
+        <p>HOME PAGE</p>
+            <section >
+                <% holiday.forEach((holiday,index)=>{%>
+                    <img src="<%=image[index].img%>" alt="">
+                    <p><%=holiday.name%></p>
+                    <p><%=holiday.date%></p>
+                    <p><%=holiday.type%></p>
+                    <p><%=holiday.description%></p>
+                    </section>
+                <%})%>
+    </main>
     <footer>
-        <%-include('./layout/footer')%>
+
     </footer>
-    
-    <script src="./js/app.js"></script>
+
 </body>
 </html>
