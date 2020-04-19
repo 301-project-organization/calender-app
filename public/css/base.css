@@ -12,25 +12,21 @@ header{
     background:  url("https://lh3.googleusercontent.com/proxy/5RZpaOx54k2ciLntKic-imynk3b5PbkWy7gXrC9HcWYaTSdQgzf0G-WKhtyO71lEmURlXpOdr6ZnYXRa9h620P_a1aQZk2P-BDA1sN-3uSqJO_OZxlJYD7I") 0 0 no-repeat;
     background-size: cover;
 }
-
 header div h1{
     font-size: 225%;
     color: rgb(255, 9, 9);
     margin-left: 2%;
     letter-spacing:3px;
 }
-
 header nav ul{
      margin-left: 3.6603221083455346vw;
 }
-
 header nav ul li{
     display:inline-block;
     list-style-type: none;
     margin-top: 3.5%;
     margin-left: 2%;
 }
-
 header nav ul li a{
     margin-right: 0.7320644216691069vw;
     color: rgb(189, 149, 21);
@@ -40,7 +36,6 @@ header nav ul li a{
     font-family: sans-serif;
     display: inline;
 }
-
 header nav ul li a:hover{
     color:cornsilk ;
     background:text green ;
@@ -48,8 +43,6 @@ header nav ul li a:hover{
     box-shadow: 0 0 9px darkgreen, 0 0 35px  darkgreen, 0 0 75px darkgreen;
     transition-delay: 0.1s;
 }
-
-
 .logo{
     width: 46.603221083455345vw;
     height: 16.44736842105263vh;
@@ -58,9 +51,7 @@ header nav ul li a:hover{
     margin-top: 1.644736842105263vh;
     font-size: 1.0980966325036603vw;
 }
-
 /*menu*/
-
 #menuToggle
 {
   display: block;
@@ -71,15 +62,12 @@ header nav ul li a:hover{
   margin-left: 95.1683748169839vw;
   margin-top: -27.960526315789473vh;
 }
-
-
 #menuToggle a
 {
   text-decoration: none;
   color: rgb(74, 116, 12);
   transition: color 0.3s ease;
 }
-
 #menuToggle a:hover
 {
     color: #fff;
@@ -92,12 +80,10 @@ header nav ul li a:hover{
     from {
       text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px green, 0 0 40px green, 0 0 50px green, 0 0 60px green, 0 0 70px green;
     }
-    
     to {
       text-shadow: 0 0 20px #fff, 0 0 30px darkgreen, 0 0 40px darkgreen, 0 0 50px darkgreen, 0 0 60px darkgreen, 0 0 70px darkgreen, 0 0 80px darkgreen;
     }
   }
-
 #menuToggle input{
   display: block;
   width: 2.9282576866764276vw;
@@ -110,7 +96,6 @@ header nav ul li a:hover{
   z-index: 2; 
   -webkit-touch-callout: none;
 }
-
 #menuToggle span{
   display: block;
   width: 2.4158125915080526vw;
@@ -125,35 +110,29 @@ header nav ul li a:hover{
               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.55s ease;
 }
-
 #menuToggle span:first-child
 {
   transform-origin: 0% 0%;
 }
-
 #menuToggle span:nth-last-child(2)
 {
   transform-origin: 0% 100%;
 }
-
 #menuToggle input:checked ~ span
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: darkgreen;
 }
-
 #menuToggle input:checked ~ span:nth-last-child(3)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
-
 #menuToggle input:checked ~ span:nth-last-child(2)
 {
   transform: rotate(-45deg) translate(0, -1px);
 }
-
 #menu{
   position: absolute;
   width: 21.961932650073205vw;
@@ -169,9 +148,6 @@ header nav ul li a:hover{
   border-radius: 20%;
   border: 3px solid green;
 }
-
-
-
 #menu li
 {
   padding: 1.644736842105263vh 0;
@@ -179,7 +155,6 @@ header nav ul li a:hover{
   text-align: center;
   display: block;
 }
-
 /*
  * And let's slide it in from the left
  */
@@ -187,21 +162,17 @@ header nav ul li a:hover{
 {
   transform: none;
 }
-
 .logoArea{
     width: 80%;
     height: 16.44736842105263vh;
     margin: 1.644736842105263vh 0.7320644216691069vw ;
 }
-
 #newLogo{
     width: 25%;
     height: 36.18421052631579vh;
     float: left;
 }
-
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-
 .svg {
     font: 5.5em 'Montserrat';
     width: 100%;
@@ -209,7 +180,6 @@ header nav ul li a:hover{
     margin-left: 5.856515373352855vw;
     margin-top:  3.289473684210526vh;
 }
-
 .text-copy {
     fill:none;
     stroke: white;
@@ -218,38 +188,30 @@ header nav ul li a:hover{
     stroke-dashoffset: 0%;
     animation: stroke-offset 5.5s infinite linear;
 }
-
 .text-copy:nth-child(1){
 	stroke: rgb(31, 78, 24);
     animation-delay: -1;
 }
-
 .text-copy:nth-child(2){
 	stroke: rgb(209, 196, 14);
 	animation-delay: -2s;
 }
-
 .text-copy:nth-child(3){
 	stroke: rgb(12, 199, 37);
 	animation-delay: -3s;
 }
-
 .text-copy:nth-child(4){
 	stroke: rgb(189, 149, 21);
 	animation-delay: -4s;
 }
-
 .text-copy:nth-child(5){
 	stroke: rgb(236, 224, 57);
 	animation-delay: -5s;
 }
-
 @keyframes stroke-offset{
 	100% {stroke-dashoffset: -35%;}
 }
-
 /* footer */
-
 footer{
     font-family: 'Anton', sans-serif;
       width: 100%;
@@ -260,7 +222,6 @@ footer{
       margin-top: 39.5738203957382vh;
       margin-left: -10px;
   }
-  
   .left-side{
   width: 45%;
   height: 90%;
@@ -269,13 +230,11 @@ footer{
   color: rgb(189, 149, 21);
   margin-left: 2.4641288433382138vw;
   }
-  
   .left-side img{
     width: 30%;
     border-radius: 30%;
     margin: 2.2831050228310503vh 1.0980966325036603vw;
   }
-  
   #firstPara{
     width: 60%;
     float: right;
@@ -283,20 +242,17 @@ footer{
     margin-right: 1.4641288433382138vw;
     line-height: 4.566210045662101vh;
   }
-  
   #secPara{
     margin-top: -1.5220700152207vh;
     margin-left: 20px;
     line-height: 40px;
   }
-  
   #icon img{
     width: 10%;
     margin-right: 1.4641288433382138vw;
     margin-top: 2.7220700152207vh;
     border-radius: 50%;
   }
-  
   .right-side{
     width: 40%;
     height:90%;
@@ -306,28 +262,21 @@ footer{
     font-size: 1.4641288433382138vw;
     margin-top: 8.266210045662101vh;
   }
-  
   #copy{
     margin-top: 7.610350076103501vh;
   }
-  
   #img1:hover{
     animation: glow1 1s infinite alternate;
   }
-  
   #img2:hover{
     animation: glow2 1s infinite alternate;
   }
-  
   #img3:hover{
     animation: glow3 1s infinite alternate;
   }
-  
   #img4:hover{
     animation: glow4 1s infinite alternate;
   }
-  
-  
   @keyframes glow1 {
     from {
       box-shadow: 0 0 5px -5px #aef4af;
@@ -336,7 +285,6 @@ footer{
       box-shadow: 0 0 5px 5px blue;
     }
   }
-  
   @keyframes glow2 {
     from {
       box-shadow: 0 0 5px -5px #aef4af;
@@ -345,7 +293,6 @@ footer{
       box-shadow: 0 0 5px 5px green;
     }
   }
-  
   @keyframes glow3 {
     from {
       box-shadow: 0 0 5px -5px #aef4af;
@@ -354,7 +301,6 @@ footer{
       box-shadow: 0 0 5px 5px darkmagenta;
     }
   }
-  
   @keyframes glow4 {
     from {
       box-shadow: 0 0 5px -5px #aef4af;
@@ -363,13 +309,9 @@ footer{
       box-shadow: 0 0 5px 5px skyblue;
     }
   }
-  
-  
   @media only screen and (min-height:200px){
   @media only screen and (max-height:767px) {
     footer{
     height: 47.828947368421055vh;
     }
   }}
-
-  
