@@ -1,6 +1,8 @@
 
 'use strict';
 
+// app.get('/update',updateHandler );
+
 function updateHandler (req,res){
     let {country, holidayname, description, date, type, picture_url }=req.body;
     let SQL = 'UPDATE holidays SET country = $1, holidayname= $2, description = $3, date=$4, type=$5, picture_url= $6 WHERE id=$7;';

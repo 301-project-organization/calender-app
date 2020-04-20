@@ -38,7 +38,7 @@ const aboutPageHandler = require('./modules/about.js');
 app.get('/',mainPageHandler);
 app.get('/searchform',searchForm);
 app.post('/newsearch',searchHandler);
-app.get('/details',showDetailsHandler);
+app.get('/details/:id',showDetailsHandler);
 app.get('/update',updateHandler );
 app.get('/about',aboutPageHandler);
 
