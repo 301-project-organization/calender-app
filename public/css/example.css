@@ -1,0 +1,894 @@
+
+/* This is header */
+header{
+    font-family: 'Anton', sans-serif;
+    width: 100%;
+    height: 17.828947368421055vh;
+    position: absolute;
+    background:  url("https://us.123rf.com/450wm/koo1980/koo19801607/koo1980160700193/60078186-black-green-and-rust-metallic-mesh-background-texture-.jpg?ver=6") 0 0 no-repeat;
+    background-size: cover;
+}
+
+header nav ul{
+     margin-left: 2.2603221083455346vw;
+     margin-top: -12.289473684210526vh;
+}
+
+header nav ul li{
+    display:inline-block;
+    list-style-type: none;
+    margin-top: 0.5%;
+    margin-left: 2%;
+}
+
+header nav ul li a{
+    margin-right: 0.7320644216691069vw;
+    color: rgb(189, 149, 21);
+    font-size: 0.6rem;
+    text-decoration: blink;
+    letter-spacing: 0.3320644216691069vw;
+    font-family: sans-serif;
+    display: inline;
+    
+}
+
+header nav ul li a:hover{
+    color:cornsilk ;
+    background:text green ;
+    background-color: darkgreen;
+    box-shadow: 0 0 0.6588579795021962vw darkgreen, 0 0 2.562225475841874vw  darkgreen, 0 0 5.490483162518301vw darkgreen;
+    transition-delay: 0.1s;
+}
+
+
+.logo{
+    width: 46.603221083455345vw;
+    height: 12.44736842105263vh;
+    float: left;
+    margin-left: -3.6603221083455346vw;
+    margin-top: 5.644736842105263vh;
+    font-size: 1.0980966325036603vw;
+}
+
+/*menu*/
+
+#menuToggle
+{
+  display: white;
+  position: fixed;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-left: 94.1683748169839vw;
+  margin-top: -9.960526315789473vh;
+}
+
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: rgb(74, 116, 12);
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px green, 0 0 40px green, 0 0 50px green, 0 0 60px green, 0 0 70px green;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px darkgreen, 0 0 40px darkgreen, 0 0 50px darkgreen, 0 0 60px darkgreen, 0 0 70px darkgreen, 0 0 80px darkgreen;
+    }
+  }
+
+#menuToggle input{
+  display: block;
+  width: 2.9282576866764276vw;
+  height: 2.2631578947368425vh;
+  position: absolute;
+  top: -1.1513157894736843vh;
+  left: -0.36603221083455345vw;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2; 
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span{
+  display: block;
+  width: 2.4158125915080526vw;
+  height: 0.6578947368421053vh;
+  margin-bottom: 0.8223684210526315vh;
+  position: relative;
+  background: yellowgreen;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: -250% -250%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: darkgreen;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.4, 0.4);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu{
+  position: fixed;
+  width: 21.961932650073205vw;
+  margin: 7.610350076103501vh 0 0 -54.904831625183014vw;
+  padding: 8.223684210526315vh  3.6603221083455346vw;
+  padding-top: 8.223684210526315vh;
+  background: black;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(0, -10000%);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  border-radius: 20%;
+  border: 3px solid green;
+}
+
+
+
+#menu li
+{
+  padding: 1.644736842105263vh 0;
+  font-size: 0.8rem;
+  text-align: center;
+  display: block;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+.logoArea{
+    width: 80%;
+    height: 16.44736842105263vh;
+    margin: 1.644736842105263vh 0.7320644216691069vw ;
+}
+
+#newLogo{
+    width: 25%;
+    height: 18.18421052631579vh;
+    float: left;
+    margin-top:-1.67427701674277vh;
+    margin-left: -0.51961932650073207vw;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+.svg {
+    font: 5.5em 'Montserrat';
+    width: 100%;
+    height: 100%;
+    margin-left: 5.856515373352855vw;
+    margin-top:  -7.289473684210526vh;
+}
+
+.text-copy {
+    fill:none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 2px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: rgb(31, 78, 24);
+    animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: rgb(209, 196, 14);
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: rgb(12, 199, 37);
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: rgb(189, 149, 21);
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: rgb(236, 224, 57);
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+
+/* footer */
+
+footer{
+    font-family: 'Anton', sans-serif;
+    width: 100%;
+    height: 19.828947368421055vh;
+    position: fixed;
+    background:  url("https://us.123rf.com/450wm/koo1980/koo19801607/koo1980160700193/60078186-black-green-and-rust-metallic-mesh-background-texture-.jpg?ver=6") 0 0 no-repeat;
+    background-size: cover;
+    margin-top: 16.5738203957382vh;
+    margin-left: -2px;
+}
+
+#p{
+  color: red;
+  margin-top: 6.0882800608828vh;
+  padding: 2%;
+  letter-spacing:  0.29282576866764276vw;
+}
+
+.left-side{
+width: 45%;
+height: 90%;
+float: left;
+font-size: 1.4177159590043923vw;
+color: rgb(189, 149, 21);
+}
+
+.left-side img{
+  width: 7.320644216691069vw;
+  height: 8.220700152207002vh;
+  border-radius: 30%;
+  margin: 2.2831050228310503vh 1.2980966325036603vw;
+}
+
+#firstPara{
+  width: 60%;
+  float: right;
+  margin-top: 2.610350076103501vh;
+  margin-right: 7.4641288433382138vw;
+  line-height: 2.566210045662101vh;
+}
+
+#secPara{
+  margin-top: -1.5220700152207vh;
+  margin-left: 0.7320644216691069vw;
+  line-height: 3.0441400304414vh;
+}
+
+#icon img{
+  width: 2.8301610541727673vw;
+  margin-right: 1.4641288433382138vw;
+  border-radius: 50%;
+  margin-top:1.366210045662101vh;
+}
+
+.right-side{
+  width: 40%;
+  height:90%;
+  float: left;
+  margin-left: 8.784773060029282vw;
+  color: rgb(189, 149, 21);
+  font-size: 1.4641288433382138vw;
+  margin-top: 3.366210045662101vh;
+}
+
+#copy{
+  margin-top: 5.610350076103501vh;
+  font-size: 1.4641288433382138vw;
+}
+
+#img1:hover{
+  animation: glow1 1s infinite alternate;
+}
+
+#img2:hover{
+  animation: glow2 1s infinite alternate;
+}
+
+#img3:hover{
+  animation: glow3 1s infinite alternate;
+}
+
+#img4:hover{
+  animation: glow4 1s infinite alternate;
+}
+
+
+@keyframes glow1 {
+  from {
+    box-shadow: 0 0 5px -5px #aef4af;
+  }
+  to {
+    box-shadow: 0 0 5px 5px blue;
+  }
+}
+
+@keyframes glow2 {
+  from {
+    box-shadow: 0 0 5px -5px #aef4af;
+  }
+  to {
+    box-shadow: 0 0 5px 5px green;
+  }
+}
+
+@keyframes glow3 {
+  from {
+    box-shadow: 0 0 5px -5px #aef4af;
+  }
+  to {
+    box-shadow: 0 0 5px 5px darkmagenta;
+  }
+}
+
+@keyframes glow4 {
+  from {
+    box-shadow: 0 0 5px -5px #aef4af;
+  }
+  to {
+    box-shadow: 0 0 5px 5px skyblue;
+  }
+}
+
+.gallery{
+    width: 30.961932650073205vw;
+    margin:22.831050228310502vh 10.980966325036603vw;
+    float: left;
+}
+
+main h2{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    }
+    
+    .center-outer {
+    display: table;
+    width: 100%;
+    height: 100%;
+    }
+    
+    .center-inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    }
+    
+    /* Essential CSS - Makes the effect work */
+    
+    body {
+    background-color: #3498db;
+    }
+    
+    .bubbles {
+    display: inline-block;
+    font-family: arial;
+    position: relative;
+    z-index: -6;
+    margin-bottom: 10px;
+    }
+    
+    .bubbles h1 {
+    position: relative;
+    margin: 1em 0 0;
+    font-family: 'Luckiest Guy', cursive;
+    color: #fff;
+    z-index: 2;
+    margin-left: 20px;
+    }
+    
+    #secBubbles{
+        margin-top:22.374429223744293vh;
+        
+    }
+    .individual-bubble {
+    position: absolute;
+    border-radius: 100%;
+    bottom: 10px;
+    background-color: #fff;
+    z-index: 1;
+    }
+
+    @import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+
+h3 {
+  font-size: 1rem;
+  line-height: 8.374429223744293vh;
+/*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+    0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+  color: #fccaff; */
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  font-family: "Sacramento", cursive;
+  text-align: center;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
+}
+
+@-webkit-keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: #111;
+      text-shadow: none;
+    }
+  
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+  /*     color: #fccaff;
+      text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+        0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+      color: #fff6a9;
+    }
+  }
+  
+  @keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: #111;
+      text-shadow: none;
+    }
+  
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+  /*     color: #fccaff;
+      text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+        0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+      color: #fff6a9;
+    }
+  }
+
+
+@media only screen and (min-width:760px){
+/* This is header */
+header{
+    font-family: 'Anton', sans-serif;
+    width: 100%;
+    height: 37.828947368421055vh;
+    margin: 0 auto;
+    margin-bottom:3.289473684210526vh;
+    position: absolute;
+    z-index: 6;
+    left: 0;
+    top: 0;
+    background:  url("https://cdn.hipwallpaper.com/i/58/5/XfU3xu.jpg") 0 0 no-repeat;
+    background-size: cover;
+}
+header nav ul{
+    margin-left: 2.2603221083455346vw;
+    margin-top: 5.289473684210526vh;
+}
+
+header nav ul li{
+   display:inline-block;
+   list-style-type: none;
+   margin-top: 0.5%;
+   margin-left: 2%;
+}
+
+header nav ul li a{
+   margin-right: 0.7320644216691069vw;
+   color: rgb(189, 149, 21);
+   font-size: 1rem;
+   text-decoration: blink;
+   letter-spacing: 0.3320644216691069vw;
+   font-family: sans-serif;
+   display: inline;
+   
+}
+
+header nav ul li a:hover{
+   color:cornsilk ;
+   background:text green ;
+   background-color: darkgreen;
+   box-shadow: 0 0 0.6588579795021962vw darkgreen, 0 0 2.562225475841874vw  darkgreen, 0 0 5.490483162518301vw darkgreen;
+   transition-delay: 0.1s;
+}
+
+
+.logo{
+    width: 46.603221083455345vw;
+    height: 16.44736842105263vh;
+    float: left;
+    margin-left: -3.6603221083455346vw;
+    margin-top: 1.644736842105263vh;
+    font-size: 1.0980966325036603vw;
+}
+
+/*menu*/
+
+#menuToggle
+{
+  display: block;
+  position: fixed;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-left: 95.1683748169839vw;
+  margin-top: -20.960526315789473vh;
+}
+
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: rgb(74, 116, 12);
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px green, 0 0 40px green, 0 0 50px green, 0 0 60px green, 0 0 70px green;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px darkgreen, 0 0 40px darkgreen, 0 0 50px darkgreen, 0 0 60px darkgreen, 0 0 70px darkgreen, 0 0 80px darkgreen;
+    }
+  }
+
+#menuToggle input{
+  display: block;
+  width: 2.9282576866764276vw;
+  height: 5.2631578947368425vh;
+  position: absolute;
+  top: -1.1513157894736843vh;
+  left: -0.36603221083455345vw;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2; 
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span{
+  display: block;
+  width: 2.4158125915080526vw;
+  height: 0.6578947368421053vh;
+  margin-bottom: 0.8223684210526315vh;
+  position: relative;
+  background: yellowgreen;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: darkgreen;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu{
+  position: fixed;
+  width: 21.961932650073205vw;
+  margin: 50px 0 0 -54.904831625183014vw;
+  padding: 8.223684210526315vh  3.6603221083455346vw;
+  padding-top: 8.223684210526315vh;
+  background: black;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(0, -10000%);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  border-radius: 20%;
+  border: 3px solid green;
+}
+
+
+
+#menu li
+{
+  padding: 1.644736842105263vh 0;
+  font-size: 1.5rem;
+  text-align: center;
+  display: block;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+.logoArea{
+    width: 80%;
+    height: 16.44736842105263vh;
+    margin: 1.644736842105263vh 0.7320644216691069vw ;
+}
+
+#newLogo{
+    width: 25%;
+    height: 37.81121052631579vh;
+    float: left;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+.svg {
+    font: 5.5em 'Montserrat';
+    width: 100%;
+    height: 100%;
+    margin-left: 5.856515373352855vw;
+    margin-top:  3.289473684210526vh;
+}
+
+.text-copy {
+    fill:none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 2px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: rgb(31, 78, 24);
+    animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: rgb(209, 196, 14);
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: rgb(12, 199, 37);
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: rgb(189, 149, 21);
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: rgb(236, 224, 57);
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+
+/* footer */
+
+footer{
+  font-family: 'Anton', sans-serif;
+    width: 100%;
+    height: 37.828947368421055vh;
+    position: absolute;
+    background:  url("https://cdn.hipwallpaper.com/i/58/5/XfU3xu.jpg") 0 0 no-repeat;
+    background-size: cover;
+    margin-top: 39.5738203957382vh;
+}
+
+.left-side{
+    width: 45%;
+    height: 90%;
+    float: left;
+    font-size: 1.3177159590043923vw;
+    color: rgb(189, 149, 21);
+    }
+    
+    .left-side img{
+      width: 10.980966325036603vw;
+      height:  15.220700152207002vh;
+      border-radius: 30%;
+      margin: 2.2831050228310503vh 1.0980966325036603vw;
+    }
+    
+    #firstPara{
+      width: 60%;
+      float: right;
+      margin-top: 3.610350076103501vh;
+      margin-right: 3.4641288433382138vw;
+      line-height: 6.566210045662101vh;
+    }
+    
+    #secPara{
+      margin-top: -1.5220700152207vh;
+      margin-left:  1.4641288433382138vw;
+      line-height:  6.0882800608828vh;
+    }
+    
+    #icon img{
+      width: 10%;
+      margin-right: 1.4641288433382138vw;
+      border-radius: 50%;
+    }
+    
+    .right-side{
+      width: 40%;
+      height:90%;
+      float: left;
+      margin-left: 8.784773060029282vw;
+      color: rgb(189, 149, 21);
+      font-size: 1.4641288433382138vw;
+      margin-top: 4.566210045662101vh;
+    }
+    
+    #copy{
+      margin-top: 1.610350076103501vh;
+    }
+    
+
+#img1:hover{
+  animation: glow1 1s infinite alternate;
+}
+
+#img2:hover{
+  animation: glow2 1s infinite alternate;
+}
+
+#img3:hover{
+  animation: glow3 1s infinite alternate;
+}
+
+#img4:hover{
+  animation: glow4 1s infinite alternate;
+}
+
+
+@keyframes glow1 {
+  from {
+    box-shadow: 0 0 5px -5px #aef4af;
+  }
+  to {
+    box-shadow: 0 0 5px 5px blue;
+  }
+}
+
+@keyframes glow2 {
+  from {
+    box-shadow: 0 0 5px -5px #aef4af;
+  }
+  to {
+    box-shadow: 0 0 5px 5px green;
+  }
+}
+
+@keyframes glow3 {
+  from {
+    box-shadow: 0 0 5px -5px #aef4af;
+  }
+  to {
+    box-shadow: 0 0 5px 5px darkmagenta;
+  }
+}
+
+@keyframes glow4 {
+  from {
+    box-shadow: 0 0 5px -5px #aef4af;
+  }
+  to {
+    box-shadow: 0 0 5px 5px skyblue;
+  }
+}
+
+.center-outer{
+    margin-top:17.374429223744293vh;
+    margin-bottom: 3.0441400304414vh;
+    margin-left: 5.9282576866764276vw;
+}
+
+#secBubbles{
+    margin-top:57.374429223744293vh;
+    margin-bottom: 3.0441400304414vh;
+    margin-left: 14.641288433382138vw;
+}
+
+.gallery{
+    width: 20.961932650073205vw;
+    margin:23.231050228310502vh 10.980966325036603vw;
+    font-size: 3.9282576866764276vw;
+}
+
+#secBubbles h1{
+    margin-left:1.374429223744293vw;
+    margin-top: 8vh;
+    font-size:2rem;
+}
+
+h3 {
+    font-size: 1rem;
+    line-height: 15.374429223744293vh;
+  /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+    color: #fccaff; */
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+      color: #fff6a9;
+    font-family: "Sacramento", cursive;
+    text-align: center;
+    animation: blink 12s infinite;
+    -webkit-animation: blink 12s infinite;
+  }
+
+  .fotorama{
+      width:  32.94289897510981vw;
+  }
+}
