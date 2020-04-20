@@ -27,11 +27,20 @@ app.use(express.static('./public'))
 
 // Functions handlers 
 const mainPageHandler = require('./modules/home.js');
-
+const updateHandler = require('./modules/update.js');
+const showDetailsHandler = require('./modules/details.js');
+const searchHandler = require('./modules/searchHandler.js');
+const searchForm = require('./modules/searchForm.js');
+const aboutPageHandler = require('./modules/about.js');
 
 
 // Routes
-app.get('/',mainPageHandler)
+app.get('/',mainPageHandler);
+app.get('/searchform',searchForm);
+app.post('/newsearch',searchHandler);
+app.get('/details',showDetailsHandler);
+app.get('/update',updateHandler );
+app.get('/about',aboutPageHandler);
 
 // Last route for non existing pages
 app.get('*',notFoundHandler);
