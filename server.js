@@ -32,7 +32,8 @@ const showDetailsHandler = require('./modules/details.js');
 const searchHandler = require('./modules/searchHandler.js');
 const searchForm = require('./modules/searchForm.js');
 const aboutPageHandler = require('./modules/about.js');
-
+const addToFavorites = require('./modules/addToFavorites.js');
+const showFavorites = require('./modules/showFavorites.js');
 
 // Routes
 app.get('/',mainPageHandler);
@@ -41,6 +42,9 @@ app.post('/newsearch',searchHandler);
 app.get('/details',showDetailsHandler);
 app.get('/update',updateHandler );
 app.get('/about',aboutPageHandler);
+
+app.post('/addFavorites',addToFavorites);
+app.get('/favorites',showFavorites);
 
 // Last route for non existing pages
 app.get('*',notFoundHandler);
@@ -52,6 +56,12 @@ function errorHandler (error,request,response){
 function notFoundHandler (req,res){
   res.status(404).send('Error 404: URL Not found');
 }
+
+
+
+
+
+
 
 // Constructor Functions:
 
