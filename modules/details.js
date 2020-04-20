@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use strict'
 app.get('/details',showDetailsHandler);
 app.get('/update',updateHandler )
@@ -21,6 +22,10 @@ function updateHandler (req,res){
     .catch(err => errorHandler(err,req,res));
   }
 
+=======
+'use strict';
+
+>>>>>>> 50434cb65b024f3d05449054d61ac35f55041557
   function showDetailsHandler(req,res){
     const SQL = 'SELECT * FROM holidays'//dynamic url 
     client.query(SQL).then(result =>{
@@ -28,3 +33,6 @@ function updateHandler (req,res){
     });
     
   }
+  module.exports = showDetailsHandler;
+
+  

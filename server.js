@@ -24,18 +24,26 @@ app.use(methodOverride('_method'));
 // To get the CSS and JS frontend files
 app.use(express.static('./public'))
 
+
+// Functions handlers 
+const mainPageHandler = require('./modules/home.js');
+const updateHandler = require('./modules/update.js');
+const showDetailsHandler = require('./modules/details.js');
+const searchHandler = require('./modules/searchHandler.js');
+const searchForm = require('./modules/searchForm.js');
+const aboutPageHandler = require('./modules/about.js');
+
+
 // Routes
-app.get('/',mainPageHandler)
+app.get('/',mainPageHandler);
+app.get('/searchform',searchForm);
+app.post('/newsearch',searchHandler);
+app.get('/details',showDetailsHandler);
+app.get('/update',updateHandler );
+app.get('/about',aboutPageHandler);
 
 // Last route for non existing pages
 app.get('*',notFoundHandler);
-
-
-// Functions handlers for the paths
-
-function mainPageHandler(req,res){
-  res.render('./pages/index');
-}
 
 
 function errorHandler (error,request,response){
@@ -48,9 +56,10 @@ function notFoundHandler (req,res){
 // Constructor Functions:
 
 
-
 app.use(errorHandler);
 
 client.connect().then(() => {
   app.listen(PORT, () => console.log(`Server is up and running on port ${PORT}`));
+
 }).catch(err=> errorHandler(err,request,response));
+
