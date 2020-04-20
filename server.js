@@ -27,13 +27,10 @@ app.use(express.static('./public'))
 
 // Functions handlers 
 const mainPageHandler = require('./modules/home.js');
-// const showDetailsHandler = require('./modules/details.js');
 const searchHandler = require('./modules/searchHandler.js');
 const searchForm = require('./modules/searchForm.js');
 const aboutPageHandler = require('./modules/about.js');
-// const updateHandler = require('./modules/update.js');
-// const editHandler = require('./modules/edit.js');
-// const deleteHandler = require('./modules/delete.js');
+
 
 // Routes
 app.get('/',mainPageHandler);
