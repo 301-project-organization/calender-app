@@ -1,5 +1,5 @@
 'use strict'
-app.get('/details',showDetails);
+app.get('/details',showDetailsHandler);
 app.get('/update',updateHandler )
 
 
@@ -21,7 +21,7 @@ function updateHandler (req,res){
     .catch(err => errorHandler(err,req,res));
   }
 
-  function showDetails(req,res){
+  function showDetailsHandler(req,res){
     const SQL = 'SELECT * FROM holidays'//dynamic url 
     client.query(SQL).then(result =>{
       res.render('./pages/layout/detail',{show:result.rows})
