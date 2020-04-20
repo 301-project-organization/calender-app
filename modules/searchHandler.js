@@ -25,7 +25,6 @@ app.use(methodOverride('_method'));
 // To get the CSS and JS frontend files
 app.use(express.static('./public'))
 
-let jaja = [];
 function searchHandler(req,res){
 const searchCountry = req.body.country;
 const searchYear = req.body.year;
@@ -37,28 +36,31 @@ let shownHolidayData = holidayList.map((value,index)=>{
     return new HolidayListItem(value);
 })
 return shownHolidayData;
-// res.render('./pages/searchresults',{shownHolidayData:shownHolidayData});
-  }).then(newResults=>{
-    // console.log( 'new results' , newResults);
-    newResults.forEach((value,index)=>{
-      if(index<3){
+  }).then(newResults => {
+    let promisses = [];
+    newResults.forEach((value, index) => {
+      if (index < 3) {
         let picAPI = `https://pixabay.com/api/?key=${process.env.IMG_KEY_API}&q=${value.name}`;
-        superagent(picAPI).then(picResults=>{
-          value.pic = picResults.body.hits[0].webformatURL;
-          // console.log('this is sparta',value);
-          jaja.push(value);
-          console.log('this is jaja inside',jaja);
-        })
+        promisses.push(
+          superagent(picAPI).then((picResults) => {
+            // console.log('this is picResults.body.hits',picResults.body.hits)
+            // console.log('picResults.body.hits[0].webformatURL',picResults.body.hits[0].webformatURL)
+            if (picResults.body.hits[0]){
+              value.pic = picResults.body.hits[0].webformatURL;
+            }else{
+              value.pic = 'http://s5.favim.com/orig/140719/beach-holiday-summer-sun-Favim.com-1927437.jpg';
+            }
+          }).catch(err=>{
+            errorHandler(err,req,res);
+          })
+        );
       }
-    })
-    setTimeout(function(){
-      return newResults;
-    },5000)
-  }).then(lastResults=>{
-    console.log('this is the last results ',lastResults);
-    res.render('./pages/searchresults',{shownHolidayData:lastResults});
-  });
-  console.log('this is jaja outside',jaja);
+    });
+    Promise.all(promisses).then(() => {
+      console.log('yeeeeeeeeees', newResults);
+      res.render('./pages/searchresults', { shownHolidayData: newResults });
+    });
+  })
 }
 
 function HolidayListItem(data){
@@ -84,40 +86,3 @@ function notFoundHandler (req,res){
 
 
 module.exports = searchHandler;
-
-
-
-
-
-
-    /*
-    let testing = [shownHolidayData[0],shownHolidayData[1],shownHolidayData[2]];
-  
-    let jojo = [];
-    
-    let jagja = testing.map((value,index)=>{
-      let picAPI = `https://pixabay.com/api/?key=${process.env.IMG_KEY_API}&q=${value.name}`;
-      return superagent(picAPI).then(picResults=>{
-        console.log('this is the value before the pic ', value);
-        console.log('this is the pic results',picResults.body.hits[0].webformatURL);
-        if (picResults.body.hits[0].webformatURL=== undefined){
-          picResults.body.hits[0].webformatURL= 'http://skdajdka.com';
-        }
-        value.pic = picResults.body.hits[0].webformatURL;
-        console.log('this is the value after the pic ', value);
-        emptyArr.push(value);
-        console.log(emptyArr);
-        return value;
-      }).then(kaka=>{
-        jojo.push(kaka);
-        console.log('this is kaka',kaka);
-        console.log('this is jojo',jojo);
-        console.log( 'this is shown holiday 0', shownHolidayData[0]);
-        console.log('this is empty arr ',emptyArr);
-      })
-  
-    })
-    console.log('this is empty arr outside ',emptyArr);
-    // return shownHolidayData;
-    console.log('this is jojo outside',jojo);
-  */
