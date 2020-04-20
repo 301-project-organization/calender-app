@@ -24,18 +24,17 @@ app.use(methodOverride('_method'));
 // To get the CSS and JS frontend files
 app.use(express.static('./public'))
 
+
+// Functions handlers 
+const mainPageHandler = require('./modules/home.js');
+
+
+
 // Routes
 app.get('/',mainPageHandler)
 
 // Last route for non existing pages
 app.get('*',notFoundHandler);
-
-
-// Functions handlers for the paths
-
-function mainPageHandler(req,res){
-  res.render('./pages/index');
-}
 
 
 function errorHandler (error,request,response){
@@ -48,9 +47,10 @@ function notFoundHandler (req,res){
 // Constructor Functions:
 
 
-
 app.use(errorHandler);
 
 client.connect().then(() => {
   app.listen(PORT, () => console.log(`Server is up and running on port ${PORT}`));
+
 }).catch(err=> errorHandler(err,request,response));
+

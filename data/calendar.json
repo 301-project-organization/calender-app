@@ -1,0 +1,410 @@
+{
+    "meta":{
+       "code":200
+    },
+    "response":{
+       "holidays":[
+          {
+             "name":"New Year's Day",
+             "description":"New Year\u2019s Day is the first day of the year, or January 1, in the Gregorian calendar.",
+             "country":{
+                "id":"jo",
+                "name":"Jordan"
+             },
+             "date":{
+                "iso":"2020-01-01",
+                "datetime":{
+                   "year":2020,
+                   "month":1,
+                   "day":1
+                }
+             },
+             "type":[
+                "National holiday"
+             ],
+             "locations":"All",
+             "states":"All"
+          },
+          {
+             "name":"March Equinox",
+             "description":"March Equinox in Jordan (Amman)",
+             "country":{
+                "id":"jo",
+                "name":"Jordan"
+             },
+             "date":{
+                "iso":"2020-03-20T05:49:36+02:00",
+                "datetime":{
+                   "year":2020,
+                   "month":3,
+                   "day":20,
+                   "hour":5,
+                   "minute":49,
+                   "second":36
+                },
+                "timezone":{
+                   "offset":"+02:00",
+                   "zoneabb":"EET",
+                   "zoneoffset":7200,
+                   "zonedst":0,
+                   "zonetotaloffset":7200
+                }
+             },
+             "type":[
+                "Season"
+             ],
+             "locations":"All",
+             "states":"All"
+          },
+          {
+             "name":"Al Isra' wal Miraj",
+             "description":"Al Isra' wal Miraj is a observance in Jordan",
+             "country":{
+                "id":"jo",
+                "name":"Jordan"
+             },
+             "date":{
+                "iso":"2020-03-21",
+                "datetime":{
+                   "year":2020,
+                   "month":3,
+                   "day":21
+                }
+             },
+             "type":[
+                "Observance"
+             ],
+             "locations":"All",
+             "states":"All"
+          },
+          {
+             "name":"Public Holiday",
+             "description":"Public Holiday is a work suspension (covid-19) in Jordan",
+             "country":{
+                "id":"jo",
+                "name":"Jordan"
+             },
+             "date":{
+                "iso":"2020-04-01",
+                "datetime":{
+                   "year":2020,
+                   "month":4,
+                   "day":1
+                }
+             },
+             "type":[
+                "National holiday"
+             ],
+             "locations":"All",
+             "states":"All"
+          },
+          {
+             "name":"Palm Sunday",
+             "description":"Palm Sunday is a Christian feast that commemorates Jesus Christ\u2019s entry into Jerusalem. It is also the start of Holy Week.",
+             "country":{
+                "id":"jo",
+                "name":"Jordan"
+             },
+             "date":{
+                "iso":"2020-04-05",
+                "datetime":{
+                   "year":2020,
+                   "month":4,
+                   "day":5
+                }
+             },
+             "type":[
+                "Optional holiday"
+             ],
+             "locations":"All",
+             "states":"All"
+          },
+
+          {
+             "name":"Easter Sunday",
+             "description":"Easter Sunday commemorates Jesus Christ\u2019s resurrection, according to Christian belief.",
+             "country":{
+                "id":"jo",
+                "name":"Jordan"
+             },
+             "date":{
+                "iso":"2020-04-12",
+                "datetime":{
+                   "year":2020,
+                   "month":4,
+                   "day":12
+                }
+             },
+             "type":[
+                "Observance"
+             ],
+             "locations":"All",
+             "states":"All"
+          },
+       
+          {
+             "name":"Ramadan",
+             "description":"Ramadan is a period of prayer, reflection and fasting for many Muslims worldwide. It is the ninth month in the Islamic calendar.",
+             "country":{
+                "id":"jo",
+                "name":"Jordan"
+             },
+             "date":{
+                "iso":"2020-04-24",
+                "datetime":{
+                   "year":2020,
+                   "month":4,
+                   "day":24
+                }
+             },
+             "type":[
+                "Observance"
+             ],
+             "locations":"All",
+             "states":"All"
+          },
+          {
+             "name":"Labour Day",
+             "description":"May Day, or Labor Day, is a day off for workers in many countries around the world.",
+             "country":{
+                "id":"jo",
+                "name":"Jordan"
+             },
+             "date":{
+                "iso":"2020-05-01",
+                "datetime":{
+                   "year":2020,
+                   "month":5,
+                   "day":1
+                }
+             },
+             "type":[
+                "National holiday"
+             ],
+             "locations":"All",
+             "states":"All"
+          },
+          {
+             "name":"Eid al-Fitr",
+             "description":"Eid-al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight.",
+             "country":{
+                "id":"jo",
+                "name":"Jordan"
+             },
+             "date":{
+                "iso":"2020-05-24",
+                "datetime":{
+                   "year":2020,
+                   "month":5,
+                   "day":24
+                }
+             },
+             "type":[
+                "National holiday"
+             ],
+             "locations":"All",
+             "states":"All"
+          },
+          {
+             "name":"Independence Day",
+             "description":"Independence Day is a national holiday in Jordan",
+             "country":{
+                "id":"jo",
+                "name":"Jordan"
+             },
+             "date":{
+                "iso":"2020-05-25",
+                "datetime":{
+                   "year":2020,
+                   "month":5,
+                   "day":25
+                }
+             },
+             "type":[
+                "National holiday"
+             ],
+             "locations":"All",
+             "states":"All"
+          },
+          
+          {
+             "name":"June Solstice",
+             "description":"June Solstice in Jordan (Amman)",
+             "country":{
+                "id":"jo",
+                "name":"Jordan"
+             },
+             "date":{
+                "iso":"2020-06-21T00:43:40+03:00",
+                "datetime":{
+                   "year":2020,
+                   "month":6,
+                   "day":21,
+                   "hour":0,
+                   "minute":43,
+                   "second":40
+                },
+                "timezone":{
+                   "offset":"+03:00",
+                   "zoneabb":"EEST",
+                   "zoneoffset":7200,
+                   "zonedst":3600,
+                   "zonetotaloffset":10800
+                }
+             },
+             "type":[
+                "Season"
+             ],
+             "locations":"All",
+             "states":"All"
+          },
+          {
+             "name":"Eid al-Adha",
+             "description":"Eid al-Adha (Id ul-Adha) is an Islamic festival falling on the 10th day of the month of Dhul Hijja (Thou al-Hijja) to commemorate the willingness of Ibrahim (Abraham) to sacrifice his son.",
+             "country":{
+                "id":"jo",
+                "name":"Jordan"
+             },
+             "date":{
+                "iso":"2020-07-31",
+                "datetime":{
+                   "year":2020,
+                   "month":7,
+                   "day":31
+                }
+             },
+             "type":[
+                "National holiday"
+             ],
+             "locations":"All",
+             "states":"All"
+          },
+          
+          {
+             "name":"Muharram\/New Year",
+             "description":"Muharram is the first month of the Islamic calendar and a time of remembrance or mourning.",
+             "country":{
+                "id":"jo",
+                "name":"Jordan"
+             },
+             "date":{
+                "iso":"2020-08-20",
+                "datetime":{
+                   "year":2020,
+                   "month":8,
+                   "day":20
+                }
+             },
+             "type":[
+                "National holiday"
+             ],
+             "locations":"All",
+             "states":"All"
+          },
+          {
+             "name":"September Equinox",
+             "description":"September Equinox in Jordan (Amman)",
+             "country":{
+                "id":"jo",
+                "name":"Jordan"
+             },
+             "date":{
+                "iso":"2020-09-22T16:30:39+03:00",
+                "datetime":{
+                   "year":2020,
+                   "month":9,
+                   "day":22,
+                   "hour":16,
+                   "minute":30,
+                   "second":39
+                },
+                "timezone":{
+                   "offset":"+03:00",
+                   "zoneabb":"EEST",
+                   "zoneoffset":7200,
+                   "zonedst":3600,
+                   "zonetotaloffset":10800
+                }
+             },
+             "type":[
+                "Season"
+             ],
+             "locations":"All",
+             "states":"All"
+          },
+          {
+             "name":"Prophet's Birthday",
+             "description":"Mawlid, or Milad, marks the birth of the Islamic prophet Muhammed, or Mohamed, in the year 570 of the Gregorian calendar.",
+             "country":{
+                "id":"jo",
+                "name":"Jordan"
+             },
+             "date":{
+                "iso":"2020-10-29",
+                "datetime":{
+                   "year":2020,
+                   "month":10,
+                   "day":29
+                }
+             },
+             "type":[
+                "National holiday"
+             ],
+             "locations":"All",
+             "states":"All"
+          },
+          {
+             "name":"December Solstice",
+             "description":"December Solstice in Jordan (Amman)",
+             "country":{
+                "id":"jo",
+                "name":"Jordan"
+             },
+             "date":{
+                "iso":"2020-12-21T12:02:19+02:00",
+                "datetime":{
+                   "year":2020,
+                   "month":12,
+                   "day":21,
+                   "hour":12,
+                   "minute":2,
+                   "second":19
+                },
+                "timezone":{
+                   "offset":"+02:00",
+                   "zoneabb":"EET",
+                   "zoneoffset":7200,
+                   "zonedst":0,
+                   "zonetotaloffset":7200
+                }
+             },
+             "type":[
+                "Season"
+             ],
+             "locations":"All",
+             "states":"All"
+          },
+          {
+             "name":"Christmas Day",
+             "description":"Christmas Day is one of the biggest Christian celebrations and falls on December 25 in the Gregorian calendar.",
+             "country":{
+                "id":"jo",
+                "name":"Jordan"
+             },
+             "date":{
+                "iso":"2020-12-25",
+                "datetime":{
+                   "year":2020,
+                   "month":12,
+                   "day":25
+                }
+             },
+             "type":[
+                "National holiday"
+             ],
+             "locations":"All",
+             "states":"All"
+          }
+       ]
+    }
+ }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('./layout/head')%>
+    <title>Find Holiday</title>
+</head>
+<body>
+    <header>
+        <%-include('./layout/header')%>
+    </header>
+    <main>
+        <article>
+            <form action="/newsearch" method="POST">
+                <p>Please specify a country and the year you want to find the holidays for</p>
+                <input type="number" name="year" value="2020" min="1950" step="1" required>
+                <select name="country">
+                    <option value="af">Afghanistan</option>
+                    <option value="al">Albania</option>
+                    <option value="dz">Algeria</option>
+                    <option value="ad">Andorra</option>
+                    <option value="ao">Angola</option>
+                    <option value="ag">Antigua and Barbuda</option>
+                    <option value="ar">Argentina</option>
+                    <option value="am">Armenia</option>
+                    <option value="au">Australia</option>
+                    <option value="at">Austria</option>
+                    <option value="az">Azerbaijan</option>
+                    <option value="bh">Bahrain</option>
+                    <option value="bd">Bangladesh</option>
+                    <option value="bb">Barbados</option>
+                    <option value="by">Belarus</option>
+                    <option value="be">Belgium</option>
+                    <option value="bz">Belize</option>
+                    <option value="bm">Bermuda</option>
+                    <option value="bt">Bhutan</option>
+                    <option value="bo">Bolivia</option>
+                    <option value="ba">Bosnia and Herzegovina</option>
+                    <option value="bw">Botswana</option>
+                    <option value="br">Brazil</option>
+                </select>
+                <button>Find Holidays</button>
+            </form>
+        </article>
+    </main>
+</body>
+</html>
