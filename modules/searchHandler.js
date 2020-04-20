@@ -27,8 +27,6 @@ return shownHolidayData;
       let picAPI = `https://pixabay.com/api/?key=${process.env.IMG_KEY_API}&q=${value.name}`;
       promisses.push(
         superagent(picAPI).then((picResults) => {
-          // console.log('this is picResults.body.hits',picResults.body.hits)
-          // console.log('picResults.body.hits[0].webformatURL',picResults.body.hits[0].webformatURL)
           if (picResults.body.hits[0]){
             value.pic = picResults.body.hits[0].webformatURL;
           }else{
@@ -40,9 +38,8 @@ return shownHolidayData;
       );
     });
     Promise.all(promisses).then(() => {
-      console.log('yeeeeeeeeees', newResults);
       res.render('./pages/searchresults', { shownHolidayData: newResults });
-    });
+    }).catch(error=>errorHandler(error,req,res));
   })
 }
 
