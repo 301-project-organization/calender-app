@@ -6,15 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/update/<%=showUpdate.id%>?_method=put" method="post">
+    <form action="/update/<%=show.id%>?_method=PUT" method="POST">
         <input type="text" name="country" value="<%= show.country %>">
         <input type="text" name="holidayname" value="<%= show.holidayname %>">
         <input type="text" name="date" value="<%= show.date %>">
         <input type="text" name="type" value="<%= show.type %>">
-        <input type="text" name="picture_url" value="<%= show.picture_url %>">
-
-        <textarea name="description" cols="30" rows="10"><%= show.description %></textarea>
-        <button type ='submit'> Update Task</button>
+        <input type="text" name="picture_url" value="<%= show.picture_url%>">
+        <textarea name="description" cols="30" rows="10" value="<%= show.description %>"></textarea>
+        <button type ="submit">Update</button>
     </form>
 </body>
 </html>
