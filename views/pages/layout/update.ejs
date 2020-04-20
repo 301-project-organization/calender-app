@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/update/<%=showUpdate.id%>?_method=put" method="post">
+    <form id="click" action="/update/<%=showUpdate.id%>?_method=put" method="post">
         <input type="text" name="country" value="<%= show.country %>">
         <input type="text" name="holidayname" value="<%= show.holidayname %>">
         <input type="text" name="date" value="<%= show.date %>">
@@ -14,7 +14,15 @@
         <input type="text" name="picture_url" value="<%= show.picture_url %>">
 
         <textarea name="description" cols="30" rows="10"><%= show.description %></textarea>
-        <button type ='submit'> Update Task</button>
+        <button id="update" type ='submit'> Update Info</button>
+        <button id="delete" type ='submit'> Delete Info</button>
     </form>
+    
 </body>
 </html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+   <script>$(document).ready(function () {$('#click').hide(); $('#update').on('click',function()
+    {$('#click').toggle();})    
+    })</script>
+    

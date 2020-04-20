@@ -38,8 +38,8 @@ const aboutPageHandler = require('./modules/about.js');
 app.get('/',mainPageHandler);
 app.get('/searchform',searchForm);
 app.post('/newsearch',searchHandler);
-app.get('/details',showDetailsHandler);
-app.get('/update',updateHandler );
+app.get('/details',showDetailsHandler);//change IT FOR ID
+app.get('/update',updateHandler );//change IT FOR ID
 app.get('/about',aboutPageHandler);
 
 // Last route for non existing pages

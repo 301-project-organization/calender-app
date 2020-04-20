@@ -11,9 +11,9 @@ function updateHandler (req,res){
       date,
       type,
       picture_url,
-      // req.params. waiting for id
+      // req.params.show_id
     ];
-    //client.query(SQL,savedValues).then(var1=> res.redirect (`file${req.params}`) );
+    //client.query(SQL,savedValues).then(var1=> res.redirect (`pages/layout/update${req.params.show_id}`) ); with dynamic 
     client.query(SQL,savedValues).then(var1=> res.redirect (`pages/layout/update`))
     .catch(err => errorHandler(err,req,res));
   }
