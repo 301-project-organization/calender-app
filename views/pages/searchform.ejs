@@ -10,7 +10,8 @@
         <article>
             <form action="/newsearch" method="POST">
                 <p>Please specify a country and the year you want to find the holidays for</p>
-                <input type="number" name="year" value="2020" min="1950" step="1" required>
+                <input type="number" name="year" min="1950" step="1" required placeholder="Year to search">
+                <input type="number" name="number" value="10" step="1" required>
                 <select name="country">
                     <option value="af">Afghanistan</option>
                     <option value="al">Albania</option>

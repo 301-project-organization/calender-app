@@ -19,7 +19,7 @@
                     <p>Type of holiday: <%=value.type%></p>
                     <form action="/addFavorites" method="POST">
                         <input type="hidden" name="name" value="<%=value.name%>">
-                        <input type="hidden" name="pic" value="https://www.webfx.com/blog/images/cdn.designinstruct.com/files/582-how-to-image-placeholders/generic-image-placeholder.png">
+                        <input type="hidden" name="pic" value="<%=value.pic%>">
                         <input type="hidden" name="country" value="<%=value.country%>">
                         <input type="hidden" name="description" value="<%=value.description%>">
                         <input type="hidden" name="date" value="<%=value.date%>">

@@ -15,8 +15,6 @@ const methodOverride = require('method-override'); // To be able to use update a
 const client = new pg.Client(process.env.DATABASE_URL);
 client.on('error', (err) => console.log(err));
 
-let emptyArr = [];
-
 // Setting up the view engine and the pages
 app.set('view engine','ejs');
 app.use(express.urlencoded({ extended: true }));
@@ -28,33 +26,37 @@ app.use(express.static('./public'))
 function searchHandler(req,res){
 const searchCountry = req.body.country;
 const searchYear = req.body.year;
+const numberOfResults = req.body.number
+
 const calAPI = `https://calendarific.com/api/v2/holidays?&api_key=${process.env.CAL_KEY_API}&country=${searchCountry}&year=${searchYear}`;
 superagent(calAPI).
 then(result=>{
 let holidayList = result.body.response.holidays;
-let shownHolidayData = holidayList.map((value,index)=>{
-    return new HolidayListItem(value);
+let shownHolidayData = [];
+holidayList.forEach((value,index)=>{
+  if (index < numberOfResults){
+    let limitedData = new HolidayListItem(value);
+    shownHolidayData.push(limitedData);
+  }
 })
 return shownHolidayData;
   }).then(newResults => {
     let promisses = [];
     newResults.forEach((value, index) => {
-      if (index < 3) {
-        let picAPI = `https://pixabay.com/api/?key=${process.env.IMG_KEY_API}&q=${value.name}`;
-        promisses.push(
-          superagent(picAPI).then((picResults) => {
-            // console.log('this is picResults.body.hits',picResults.body.hits)
-            // console.log('picResults.body.hits[0].webformatURL',picResults.body.hits[0].webformatURL)
-            if (picResults.body.hits[0]){
-              value.pic = picResults.body.hits[0].webformatURL;
-            }else{
-              value.pic = 'http://s5.favim.com/orig/140719/beach-holiday-summer-sun-Favim.com-1927437.jpg';
-            }
-          }).catch(err=>{
-            errorHandler(err,req,res);
-          })
-        );
-      }
+      let picAPI = `https://pixabay.com/api/?key=${process.env.IMG_KEY_API}&q=${value.name}`;
+      promisses.push(
+        superagent(picAPI).then((picResults) => {
+          // console.log('this is picResults.body.hits',picResults.body.hits)
+          // console.log('picResults.body.hits[0].webformatURL',picResults.body.hits[0].webformatURL)
+          if (picResults.body.hits[0]){
+            value.pic = picResults.body.hits[0].webformatURL;
+          }else{
+            value.pic = 'http://s5.favim.com/orig/140719/beach-holiday-summer-sun-Favim.com-1927437.jpg';
+          }
+        }).catch(err=>{
+          errorHandler(err,req,res);
+        })
+      );
     });
     Promise.all(promisses).then(() => {
       console.log('yeeeeeeeeees', newResults);
