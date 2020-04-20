@@ -39,7 +39,9 @@ return shownHolidayData;
     });
     Promise.all(promisses).then(() => {
       res.render('./pages/searchresults', { shownHolidayData: newResults });
-    }).catch(error=>errorHandler(error,req,res));
+    })
+  }).catch(err=>{
+    errorHandler(err,req,res);
   })
 }
 

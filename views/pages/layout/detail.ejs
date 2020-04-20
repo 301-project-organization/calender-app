@@ -6,25 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-<div>
-      <% show.forEach(element =>{  %>
-        <h1> <%= element.country %> </h1>
-        <p> <%= element.holidayname %></p>
-        <div> <%= element.description %> </div>
-        <p> <%= element.date %></p>
-        <h2><%= element.type %></h2>
-    <img src = <%=element.picture_url%> >
-    
-    
-    
-   
-    
-    
+  
+  <div>
+    <img src = "<%=show.picture_url%>">
+    <p> <%= show.country %> </p>
+    <p> <%= show.holidayname %></p>
+    <p> <%= show.description %> </p>
+    <p> <%= show.date %></p>
+    <p><%= show.type %></p>
+  </div>
 
+  <section>
+    <form action="/edit/<%=show.id%>" method="GET">
+      <button >Update</button>
+    </form>
+  </section>
 
-
-</div>
-<%});%>
+  <section>
+    <form action="/delete/<%=show.id%>?_method=DELETE" method="POST">
+      <button >Delete</button>
+    </form>
+  </section>
 
 </body>
 </html>
