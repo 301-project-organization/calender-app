@@ -1,27 +1,8 @@
 'use strict';
 
-// Load Environment Variables from the .env file
-require('dotenv').config();
 
-// Setting up dependencies
-const express = require('express');
 const superagent = require('superagent');
-const PORT = process.env.PORT || 4000;
-const app = express();
-const pg = require('pg'); // To load the PostgreSQL client of node JS.
-const methodOverride = require('method-override'); // To be able to use update and delete methods with POST
 
-// make a connection to the psql using the provided link
-const client = new pg.Client(process.env.DATABASE_URL);
-client.on('error', (err) => console.log(err));
-
-// Setting up the view engine and the pages
-app.set('view engine','ejs');
-app.use(express.urlencoded({ extended: true }));
-app.use(methodOverride('_method'));
-
-// To get the CSS and JS frontend files
-app.use(express.static('./public'))
 
 function searchHandler(req,res){
 const searchCountry = req.body.country;
