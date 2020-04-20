@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favorites</title>
+    <link rel="stylesheet" href="/css/sr.css">
 </head>
 <body>
-    
+    <main>
+        <section>
+            <% holidayResults.forEach(value=>{ %>
+                <div class="favHolidays">
+                    <img src="<%=value.picture_url%>" alt="">
+                    <p>Holiday's Name: <%=value.holidayname%></p>
+                    <button><a href="/details/<%=value.id%>">View Details</a></button>
+                </div>
+            <%})%>
+        </section>
+    </main>
 </body>
 </html>
