@@ -17,13 +17,14 @@
                     <p>Description: <%=value.description%></p>
                     <p>Date: <%=value.date%></p>
                     <p>Type of holiday: <%=value.type%></p>
-                    <form action="" method="POST">
+                    <form action="/addFavorites" method="POST">
                         <input type="hidden" name="name" value="<%=value.name%>">
+                        <input type="hidden" name="pic" value="<%=value.pic%>">
                         <input type="hidden" name="country" value="<%=value.country%>">
                         <input type="hidden" name="description" value="<%=value.description%>">
                         <input type="hidden" name="date" value="<%=value.date%>">
                         <input type="hidden" name="type" value="<%=value.type%>">
-                        <button>Add To Reminders</button>
+                        <button>Add To Favorites</button>
                     </form>
                 </div>
             <%})%>
