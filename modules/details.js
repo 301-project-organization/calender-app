@@ -1,5 +1,9 @@
 'use strict';
 
+const pg = require('pg');
+const client = new pg.Client(process.env.DATABASE_URL);
+
+
   function showDetailsHandler(req,res){
     const SQL = 'SELECT * FROM holidays WHERE id=$1;';
     const values = [req.params.id];

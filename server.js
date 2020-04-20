@@ -28,9 +28,13 @@ app.use(express.static('./public'))
 // Functions handlers 
 const mainPageHandler = require('./modules/home.js');
 const updateHandler = require('./modules/update.js');
+const editHandler = require('./modules/edit.js');
 const showDetailsHandler = require('./modules/details.js');
 const searchHandler = require('./modules/searchHandler.js');
 const searchForm = require('./modules/searchForm.js');
+const deleteHandler = require('./modules/delete.js');
+const addToFavorites = require('./modules/addToFavorites.js');
+const showFavorites = require('./modules/showFavorites.js');
 const aboutPageHandler = require('./modules/about.js');
 
 
@@ -39,7 +43,11 @@ app.get('/',mainPageHandler);
 app.get('/searchform',searchForm);
 app.post('/newsearch',searchHandler);
 app.get('/details/:id',showDetailsHandler);
-app.get('/update',updateHandler );
+app.put('/update/:id',updateHandler);
+app.get('/edit/:id',editHandler);
+app.delete('/delete/:id', deleteHandler);
+app.get('/addFavorites',addToFavorites);
+app.get('/favorites',showFavorites);
 app.get('/about',aboutPageHandler);
 
 // Last route for non existing pages
