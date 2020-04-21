@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%-include('./layout/head')%>
-    <title>Calendar App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HolidayFinder</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/marah.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Bellota:wght@700&family=Fugaz+One&family=Rancho&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <header>
-        <%-include('./layout/header')%>
-    </header>
-    <main>
-        <p>HOME PAGE</p>
-            <section >
-                <% holiday.forEach((holiday,index)=>{%>
-                    <img src="<%=image[index].img%>" alt="">
-                    <p><%=holiday.name%></p>
-                    <p><%=holiday.date%></p>
-                    <p><%=holiday.type%></p>
-                    <p><%=holiday.description%></p>
-                    </section>
-                <%})%>
+   
+        <header>
+            <%- include('./layout/header.ejs')%>
+        </header>
+
+    <main class="contOFcont">
+            <% holiday.forEach((holiday,index)=>{%>
+        <section class="container-marah">
+            <p class="name-marah"><%=holiday.name%></p>
+            <img class="img-marah" src="<%=image[index].img%>" alt="">
+            <p class="date-marah"><%=holiday.date%></p>
+            <p class="type-marah"><%=holiday.type%></p>
+            <p class="desc-marah"><%=holiday.description%></p>
+        </section>
+            <%})%>
     </main>
+
     <footer>
-        <%-include('./layout/footer')%>
+        <%- include('./layout/footer.ejs')%>
     </footer>
+
+    
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/example.js"></script>
+
 </body>
 
 </html>
