@@ -8,12 +8,13 @@
 </head>
 <body>
     <main>
-        <section>
+        <section class="favoritesResults">
             <% holidayResults.forEach(value=>{ %>
                 <div class="favHolidays">
-                    <img src="<%=value.picture_url%>" alt="">
-                    <p>Holiday's Name: <%=value.holidayname%></p>
-                    <button><a href="/details/<%=value.id%>">View Details</a></button>
+                        <img src="<%=value.picture_url%>" alt="">
+
+                    <p><%=value.holidayname%></p>
+                    <button onclick="window.location.href = '/details/<%=value.id%>';">View Details</button>
                 </div>
             <%})%>
         </section>
