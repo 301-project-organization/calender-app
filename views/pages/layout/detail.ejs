@@ -3,30 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title id="titleID">Details</title>
 </head>
-<body>
+<body id=bodyId style="text-align: center;">
+  <fieldset>
   
-  <div>
-    <img src = "<%=show.picture_url%>">
-    <p> <%= show.country %> </p>
-    <p> <%= show.holidayname %></p>
-    <p> <%= show.description %> </p>
-    <p> <%= show.date %></p>
-    <p><%= show.type %></p>
+    <div class="row">
+      <img src = "<%= show.picture_url %>" style="width: 100%;" >
   </div>
+  <div class="row">
+        <p> <%= show.country %> </p>
+  </div>
+  <div class="row">
+          <p> <%= show.holidayname %></p>
+  </div>
+  <div class="row">
+            <p> <%= show.description %> </p>
+  </div>
+  <div class="row">
+              <p> <%= show.date %></p>
+  </div>
+  <div class="row">
+                <p><%= show.type %></p>
+  </div>
+ 
 
-  <section>
+ <div class="row">
+  <div class="col-1">
     <form action="/edit/<%=show.id%>" method="GET">
-      <button >Update</button>
+      <button id="btnUpdate">Update</button>
     </form>
-  </section>
-
-  <section>
+ </div>
+  
+    <div class="col-2">
     <form action="/delete/<%=show.id%>?_method=DELETE" method="POST">
-      <button >Delete</button>
+      <button id="btnDelete" >Delete</button>
     </form>
-  </section>
+  </div>
+ </div>
+
+</fieldset>
 
 </body>
+<link rel="stylesheet" href="/css/detailUpdate.css"  type = "text/css"/>
+
 </html>

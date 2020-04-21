@@ -5,15 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <form action="/update/<%=show.id%>?_method=PUT" method="POST">
-        <input type="text" name="country" value="<%= show.country %>">
-        <input type="text" name="holidayname" value="<%= show.holidayname %>">
-        <input type="text" name="date" value="<%= show.date %>">
-        <input type="text" name="type" value="<%= show.type %>">
-        <input type="text" name="picture_url" value="<%= show.picture_url%>">
-        <textarea name="description" cols="30" rows="10" value="<%= show.description %>"></textarea>
-        <button type ="submit">Update</button>
+
+<body id="bodyId">
+    <form id="formId" action="/update/<%=show.id%>?_method=PUT" method="POST">
+       
+
+    <fieldset>
+        <legend >Update My Holiday</legend>
+        <div class="row">
+            <label for="fname">Country</label>
+        </div>
+        
+        <div class="row">
+            <input id="in1" type="text" name="country" value="<%= show.country %>" placeholder="Country">
+         </div>
+
+         <div class="row">
+            <label for="fname">Holiday Name</label>
+        </div> 
+         <div class="row">
+            <input type="text" name="holidayname" value="<%= show.holidayname %>">
+        </div>
+        <div class="row">
+            <label for="fname">Date</label>
+        </div>
+         <div class="row">
+            <input type="text" name="date" value="<%= show.date %>">
+         </div>
+         <div class="row">
+            <label for="fname">Type</label>
+        </div>
+        <div class="row">
+            <input type="text" name="type" value="<%= show.type %>">
+        </div>
+        <div class="row">
+            <label for="fname">Insert Picture</label>
+        </div>
+        <div class="row">
+            <input type="text" name="picture_url" value="<%= show.picture_url%>">
+        </div>
+        <div class="row">
+            <label for="fname">Description</label>
+        </div>
+        <div class="row">
+            <textarea name="description" cols="30" rows="10" value="<%= show.description %>"></textarea>
+         </div>
+         <div class="row">
+            <button type ="submit"  id="submit">Update</button>
+        </div>
+    
+</fieldset>
+
     </form>
+</div>
 </body>
+<link rel="stylesheet" href="/css/detailUpdate.css"  type = "text/css"/>
+<script src="../modules/update.js"></script>
 </html>

@@ -1,0 +1,98 @@
+#bodyId{
+background-color:  lavender;
+}
+
+#divId{
+    background-color: #b2b2e1a8;
+}
+
+#titleID{
+    background-color: #8f8fba8c;
+    font-weight: bolder;
+    text-decoration: underline;
+    color: #2E3837;
+    font-size: 28px;
+}
+#btnId{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#bodyId{
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+        background-color:lavender;
+}
+fieldset
+{
+  background-color:#CCC;
+  max-width:500px;
+  padding:16px;	
+  border-radius: 10px;
+  box-shadow: 0 0 8px 8px #AAAAAA;
+}
+legend {
+    
+    background: -webkit-linear-gradient(90deg, #CCCCCC, #FFFFFF) repeat scroll 0 0 transparent;
+    background: -moz-linear-gradient(90deg, #CCCCCC, #FFFFFF) repeat scroll 0 0 transparent;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0 0 15px #AAAAAA;
+    -moz-box-shadow: 0 0 15px #AAAAAA;
+    box-shadow: 0 0 10px #AAAAAA;
+    padding-right: 1em;
+    padding-left: 1em;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .row, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+    
+    fieldset { min-width: min-content; }
+}
+
+  
+input[type=text], textarea {
+    width: 100%;
+    padding: 12px 12px 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    align-content: center;
+  }
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  #submit , #btnUpdate ,#btnDelete{
+    background-color:#8f8fba8c;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+ 
+  .col-1 {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+  }
+  
+  .col-2 {
+    float: right;
+    width: 50%;
+    margin-top: 6px;
+  }
