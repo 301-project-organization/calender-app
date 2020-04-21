@@ -1,5 +1,69 @@
+body{
+    background-color: lavender;
+}
+
+.searchArticle{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .searchResults , .favHolidays {
     border: 1px solid black;
     margin: 20px;
     padding: 20px;
 }
+.searchForm{
+    border: 2px solid rgb(163, 160, 160);
+    border-radius: 10px;
+    width: 80vw;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    background-color: #C3C3E9;
+    box-shadow:  0 0 8px 8px #C3C3E9;
+}
+
+.searchForm p{
+    margin: 10px 0;
+    font-size: 24px;
+    text-align: left;
+    margin-left: 10vw;
+}
+.searchForm legend{
+    text-align: center;
+    border-top: 2px solid rgb(163, 160, 160);
+    border-right: 2px solid rgb(163, 160, 160);
+    border-left: 2px solid rgb(163, 160, 160);
+    border-radius: 10px 10px 0 0;
+    background-color: #C3C3E9;
+    padding: 10px;
+    font-size: 20px;
+}
+.searchForm input {
+    width: 70%;
+    height: 20px;
+    margin-bottom: 20px;
+    background-color: #d3e2ef;
+    text-align: center;
+    padding: 10px;
+}
+.searchForm select{
+    width: 70%;
+    padding: 10px;
+    background-color:#d3e2ef;
+    font-weight: bold;
+}
+.searchForm button {
+    padding: 2vh 0;
+    margin: 25px 0;
+    border-radius: 25px;
+    background: #8f8fba8c;
+    font-size: 16px;
+    width: 70%;
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(59, 59, 59);
+    text-decoration: underline;
+}
+

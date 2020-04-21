@@ -3,42 +3,50 @@
 <head>
     <%-include('./layout/head')%>
     <title>Find Holiday</title>
+    <link rel="stylesheet" href="./css/sr.css">
 </head>
 <body>
 
     <main>
-        <article>
-            <form action="/newsearch" method="POST">
-                <p>Please specify a country and the year you want to find the holidays for</p>
-                <input type="number" name="year" min="1950" step="1" required placeholder="Year to search">
-                <input type="number" name="number" value="10" step="1" required>
-                <select name="country">
-                    <option value="af">Afghanistan</option>
-                    <option value="al">Albania</option>
-                    <option value="dz">Algeria</option>
-                    <option value="ad">Andorra</option>
-                    <option value="ao">Angola</option>
-                    <option value="ag">Antigua and Barbuda</option>
-                    <option value="ar">Argentina</option>
-                    <option value="am">Armenia</option>
-                    <option value="au">Australia</option>
-                    <option value="at">Austria</option>
-                    <option value="az">Azerbaijan</option>
-                    <option value="bh">Bahrain</option>
-                    <option value="bd">Bangladesh</option>
-                    <option value="bb">Barbados</option>
-                    <option value="by">Belarus</option>
-                    <option value="be">Belgium</option>
-                    <option value="bz">Belize</option>
-                    <option value="bm">Bermuda</option>
-                    <option value="bt">Bhutan</option>
-                    <option value="bo">Bolivia</option>
-                    <option value="ba">Bosnia and Herzegovina</option>
-                    <option value="bw">Botswana</option>
-                    <option value="br">Brazil</option>
-                </select>
-                <button>Find Holidays</button>
-            </form>
+        <article class="searchArticle">
+            <p>Please specify a country and the year you want to find the holidays for</p>
+            <fieldset class="searchForm">
+                <legend>Holiday Search</legend>
+                <form action="/newsearch" method="POST">
+                    <p>Specify a year</p>
+                    <input type="number" name="year" min="1950" step="1" required placeholder="Year to search">
+                    <p>Enter number of results</p>
+                    <input type="number" name="number" min="1" value="10" step="1" required>
+                    <p>Choose a country</p>
+                    <select name="country">
+                        <option value="af">Afghanistan</option>
+                        <option value="al">Albania</option>
+                        <option value="dz">Algeria</option>
+                        <option value="ad">Andorra</option>
+                        <option value="ao">Angola</option>
+                        <option value="ag">Antigua and Barbuda</option>
+                        <option value="ar">Argentina</option>
+                        <option value="am">Armenia</option>
+                        <option value="au">Australia</option>
+                        <option value="at">Austria</option>
+                        <option value="az">Azerbaijan</option>
+                        <option value="bh">Bahrain</option>
+                        <option value="bd">Bangladesh</option>
+                        <option value="bb">Barbados</option>
+                        <option value="by">Belarus</option>
+                        <option value="be">Belgium</option>
+                        <option value="bz">Belize</option>
+                        <option value="bm">Bermuda</option>
+                        <option value="bt">Bhutan</option>
+                        <option value="bo">Bolivia</option>
+                        <option value="ba">Bosnia and Herzegovina</option>
+                        <option value="bw">Botswana</option>
+                        <option value="br">Brazil</option>
+                    </select>
+                    <br>
+                    <button>Find Holidays</button>
+                </form>
+            </fieldset>
         </article>
     </main>
 </body>
