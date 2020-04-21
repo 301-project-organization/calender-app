@@ -15,15 +15,14 @@ const client = new pg.Client(process.env.DATABASE_URL);
 client.on('error', (err) => console.log(err));
 
 
-
 // Setting up the view engine and the pages
 app.set('view engine','ejs');
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
 // To get the CSS and JS frontend files
-app.use(express.static('./public'))
-
+app.use(express.static('./public'));
+app.use('/public', express.static('public'));
 
 // Functions handlers 
 const mainPageHandler = require('./modules/home.js');
