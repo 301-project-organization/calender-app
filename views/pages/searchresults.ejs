@@ -16,10 +16,10 @@
             <div class='searchResults'>
                 <p class="ammarTitle"><%=value.name%></p>
                 <img src="<%=value.pic%>" alt="">
-                <p><%=value.country%></p>
-                <p id="resDescription"><%=value.description%></p>
-                <p><%=value.date%></p>
-                <p><%=value.type%></p>
+                <p class="updatep"><%=value.country%></p>
+                <p class="updatep" ><%=value.description%></p>
+                <p class="updatep"><%=value.date%></p>
+                <p class="updatep"><%=value.type%></p>
                 <form action="/addFavorites" method="POST">
                     <input type="hidden" name="name" value="<%=value.name%>">
                     <input type="hidden" name="pic" value="<%=value.pic%>">
@@ -27,7 +27,7 @@
                     <input type="hidden" name="description" value="<%=value.description%>">
                     <input type="hidden" name="date" value="<%=value.date%>">
                     <input type="hidden" name="type" value="<%=value.type%>">
-                    <button>Add To Favorites</button>
+                    <button class="favbtn">Add To Favorites</button>
                 </form>
             </div>
             <%})%>
