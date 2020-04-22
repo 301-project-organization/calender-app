@@ -13,13 +13,13 @@
     <main>
         <article class="searchArticle">
             <fieldset class="searchForm">
-                <legend>Holiday Search</legend>
+                <legend class="updatep">Holiday Search</legend>
                 <form action="/newsearch" method="POST">
-                    <p>Specify a year</p>
-                    <input type="number" name="year" min="1950" step="1" required placeholder="Year to search">
-                    <p>Enter number of results</p>
+                    <p class="updatep">Specify a year</p>
+                    <input type="number" name="year" min="1950" step="1" required placeholder="YYYY">
+                    <p class="updatep">Enter number of results</p>
                     <input type="number" name="number" min="1" value="10" step="1" required>
-                    <p>Choose a country</p>
+                    <p class="updatep">Choose a country</p>
                     <select name="country">
                         <option value="af">Afghanistan</option>
                         <option value="al">Albania</option>
@@ -165,7 +165,7 @@
                         <option value="zw">Zimbabwe</option>
                     </select>
                     <br>
-                    <button>Find Holidays</button>
+                    <button class="favbtn">Find Holidays</button>
                 </form>
             </fieldset>
         </article>

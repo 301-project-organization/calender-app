@@ -20,7 +20,7 @@ body {
         align-items: center;
         display: grid;
         grid-template-columns: 20px 1fr 20px;
-        grid-template-rows: 60px 170px 20px 20px 1fr ; 
+        grid-template-rows: 60px 170px 50px 50px 1fr ; 
         background-color: #C3C3E9;
         margin-top: 18%;
         border-radius: 25px;
@@ -32,23 +32,23 @@ body {
         grid-row: 2 / 3;  
         width: 100%;
         height: 100%;
-        border-radius: 25px;  
+        border-radius: 25px;
+        /* padding: 10% 0;   */
     }
       .name-marah{
         grid-column: 2 / 3;
         grid-row: 1 /2 ;
-        font-size: 12px; 
         background-color: #8f8fba8c;
         border-radius: 25px;
         color: #2E3837;
         font-family: 'Bellota', cursive;
-        font-size: 18px; 
+        font-size: 25px; 
         padding: 5px 3px 5px 3px;
       }
       .date-marah{
         grid-column: 2 / 3;
         grid-row: 3 /4 ;
-        font-size: 12px;
+        font-size: 18px;
         font-family: 'Open Sans Condensed', sans-serif;
         letter-spacing: 1px;
         font-weight: bolder;
@@ -56,7 +56,7 @@ body {
       .type-marah{
         grid-column: 2/3;
         grid-row: 4 /5; 
-        font-size: 12px;
+        font-size: 18px;
         font-family: 'Open Sans Condensed', sans-serif;
         letter-spacing: 1px;
         font-weight: bolder;
@@ -64,7 +64,7 @@ body {
       .desc-marah{
         grid-column: 2 / 3;
         grid-row: 5/ 6;
-        font-size: 13px;
+        font-size: 17px;
         font-family: 'Open Sans Condensed', sans-serif;
         letter-spacing: 1px;
         font-weight: bolder;
