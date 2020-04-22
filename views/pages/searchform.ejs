@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%-include('./layout/head')%>
-    <title>Find Holiday</title>
     <link rel="stylesheet" href="./css/sr.css">
 </head>
-<body>
 
+<body>
+    <header>
+        <%- include('./layout/header.ejs')%>
+    </header>
     <main>
         <article class="searchArticle">
-            <p>Please specify a country and the year you want to find the holidays for</p>
             <fieldset class="searchForm">
                 <legend>Holiday Search</legend>
                 <form action="/newsearch" method="POST">
@@ -168,5 +170,9 @@
             </fieldset>
         </article>
     </main>
+    <footer>
+        <%- include('./layout/footer.ejs')%>
+    </footer>
 </body>
+
 </html>
