@@ -35,16 +35,16 @@
   <section class="renderResults">
     <div class='searchResults'>
       <img src="<%=show.picture_url%>">
-      <p> <%= show.holidayname %></p>
-      <p> <%= show.country %> </p>
-      <p> <%= show.description %> </p>
-      <p> <%= show.date %></p>
-      <p><%= show.type %></p>
+      <p class="detailsp"> <%= show.holidayname %></p>
+      <p class="detailsp"> <%= show.country %> </p>
+      <p class="detailsp"> <%= show.description %> </p>
+      <p class="detailsp"> <%= show.date %></p>
+      <p class="detailsp"><%= show.type %></p>
       <form action="/edit/<%=show.id%>" method="GET">
-        <button>Update</button>
+        <button class="detbtn">Update</button>
       </form>
       <form action="/delete/<%=show.id%>?_method=DELETE" method="POST">
-        <button>Delete</button>
+        <button class="detbtn">Delete</button>
       </form>
     </div>
   </section>

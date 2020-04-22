@@ -8,11 +8,29 @@
 	<link rel="stylesheet" type="text/css" href="/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="/css/example.css">
 	<link href="https://fonts.googleapis.com/css2?family=Bellota:wght@700&family=Fugaz+One&family=Rancho&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="https://cdn.iconscout.com/icon/free/png-256/calendar-date-year-event-schedule-link-holiday-5-22713.png" type="image/png" sizes="152x152">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
 	<header>
-		<%- include('./header.ejs')%>
+		<div class="wrapper">
+			<a href="./" class="logo"><img src="imgs/logo2.png" alt="logo"></a>
+			<a href="" class="menu_icon" id="menu_icon" alt="menu"></a>
+			<nav id="nav_menu">
+				<ul>
+					<li><a href="./">Home</a></li>
+					<li><a href="./favorites">Favorites</a></li>
+					<li><a href="./searchform">Search</a></li>
+					<li><a href="./about">About Us</a></li>
+				</ul>
+			</nav>
+			<ul class="social">
+				<li><a class="fb" href="https://www.facebook.com/holidayyear.calendar/"></a></li>
+				<li><a class="twitter" href="https://twitter.com/explore"></a></li>
+				<li><a class="gplus" href="https://myaccount.google.com/profile?pli=1"></a></li>
+			</ul>
+		</div>
 	</header>
 
 	<section class="background">
@@ -26,67 +44,48 @@
 	</section>
 
 	<section class="features">
-
-		<div class="wrapper">
-			<div class="feature">
-				<div class="people">
-					<img src="https://ca.slack-edge.com/TNGRRLUMA-UT2N6JRFD-51c8fdf2d38e-512" alt="Marah">
-				</div>
-				<div class="description">
-					<h3>Marah Joudeh</h3>
-					<p> 23 years
-						<br />Web Developer / Civil Engineering graduate from JU
-						<br />“What’s meant to be yours is already making its way to you”</p>
-					<a href="https://www.linkedin.com/in/marah-joudeh-7a687617b/">linkedin.com<span>→</span></a>
-				</div>
-			</div>
-			<div class="feature">
-				<div class="people">
-					<img src="https://ca.slack-edge.com/TNGRRLUMA-UTGCM6L6A-68a7c3b1b6eb-512" alt="Ahmed">
-				</div>
-				<div class="description">
-					<h3>Ahmed Abu Samaan</h3>
-					<p>I started to like Information Technology when I was student at school, When I graduate from high
-						school and went to the University I wanted to choose a filed it was really confused, but at the end i selected IT filed.
-						I graduated from the University of Jordan and now I am training at ITCU Collage Advance coding.
-					</p>
-					<a href="https://www.linkedin.com/in/ahmed-abu-samaan-6424831a1/">linkedin.com<span>→</span></a>
-				</div>
-			</div>
-			<div class="feature">
-				<div class="people">
-					<img src="https://ca.slack-edge.com/TNGRRLUMA-UT1CPNC90-aa21b11ab81c-512" alt="Sara">
-				</div>
-				<div class="description">
-					<h3>Sarah Abu Malash</h3>
-					<p> 25 years old
-						<br />Graduated from petra university class 2019
-						<br />I love food and cooking obviously!
-						<br />my main reason of cutting my hair this short is to path fast and not having to do my hair
-						after!</p>
-					<a href="https://www.facebook.com/sarah.malash.1">Facebook.com<span>→</span></a>
-				</div>
-			</div>
-			<div class="feature">
-				<div class="people">
-					<img src="https://ca.slack-edge.com/TNGRRLUMA-UTG2MN1E3-ecf012c3b780-512" alt="Amaar">
-				</div>
-				<div class="description">
-					<h3>Ammar Badwan</h3>
-					<p>I'm 24 years old civil engineer currently studying web development in LTUC and really enjoying
-						this experience, planning to become a very successful software engineer and willing to do
-						whatever it takes to succeed.</p>
-					<a href="https://www.linkedin.com/in/ammar-badwan/">linkedin.com<span>→</span></a>
-				</div>
-			</div>
+		<div class="people">
+			<img class="member-img" src="https://ca.slack-edge.com/TNGRRLUMA-UT2N6JRFD-51c8fdf2d38e-512" alt="Marah">
+			<h3>Marah Joudeh</h3>
+			<p class="parag"> 23 years
+				<br />Web Developer / Civil Engineering graduate from JU
+				<br />“What’s meant to be yours is already making its way to you”</p>
+			<a href="https://www.linkedin.com/in/marah-joudeh-7a687617b/">linkedin.com<span>→</span></a>	
 		</div>
-
+		<div class="people">
+			<img class="member-img"src="https://ca.slack-edge.com/TNGRRLUMA-UTGCM6L6A-68a7c3b1b6eb-512" alt="Ahmed">
+			<h3>Ahmed Abu Samaan</h3>
+			<p class="parag">I started to like Information Technology when I was student at school, When I graduate from high
+				school and went to the University I wanted to choose a filed it was really confused, but at the end i selected IT filed.
+				I graduated from the University of Jordan and now I am training at ITCU Collage Advance coding.</p>
+			<a href="https://www.linkedin.com/in/ahmed-abu-samaan-6424831a1/">linkedin.com<span>→</span></a>
+		</div>
+		<div class="people">
+			<img class="member-img"src="https://ca.slack-edge.com/TNGRRLUMA-UT1CPNC90-aa21b11ab81c-512" alt="Sara">
+			<h3>Sarah Abu Malash</h3>
+			<p class="parag"> 25 years old
+				<br />Graduated from petra university class 2019
+				<br />I love food and cooking obviously!
+				<br />my main reason of cutting my hair this short is to path fast and not having to do my hair
+				after!</p>
+			<a href="https://www.facebook.com/sarah.malash.1">Facebook.com<span>→</span></a>
+		</div>
+		<div class="people">
+			<img class="member-img" src="https://ca.slack-edge.com/TNGRRLUMA-UTG2MN1E3-ecf012c3b780-512" alt="Amaar">
+			<h3>Ammar Badwan</h3>
+			<p class="parag">I'm 24 years old civil engineer currently studying web development in LTUC and really enjoying
+				this experience, planning to become a very successful software engineer and willing to do
+				whatever it takes to succeed.</p>
+			<a href="https://www.linkedin.com/in/ammar-badwan/">linkedin.com<span>→</span></a>
+		</div>
 	</section>
-	<footer>
-		<%- include('./footer.ejs')%>
-	</footer>
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/example.js"></script>
-</body>
 
+	<footer>
+		<img class="footerImg" src="imgs/logooo.png" alt="footer">
+		<p class="rights">Copyright © 2020 Holiday Finder <a href="https://github.com/301-project-organization/calender-app">calender-app.com</a></p>
+		<script type="text/javascript" src="/js/jquery.js"></script>
+		<script type="text/javascript" src="/js/example.js"></script>
+	</footer>
+
+</body>
 </html>

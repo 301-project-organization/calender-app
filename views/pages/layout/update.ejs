@@ -34,21 +34,21 @@
     </header>
     <article class="searchArticle">
         <fieldset class="searchForm">
-            <legend>Holiday Search</legend>
+            <legend class="updatep">Update your details</legend>
             <form action="/update/<%=show.id%>?_method=PUT" method="POST">
-                <p>Country</p>
+                <p class="updatep">Country</p>
                 <input type="text" name="country" value="<%= show.country %>">
-                <p>Holiday Name</p>
+                <p class="updatep">Holiday Name</p>
                 <input type="text" name="holidayname" value="<%= show.holidayname %>">
-                <p>Date</p>
+                <p class="updatep">Date</p>
                 <input type="text" name="date" value="<%= show.date %>">
-                <p>Type</p>
+                <p class="updatep">Type</p>
                 <input type="text" name="type" value="<%= show.type %>">
-                <p>Picture</p>
+                <p class="updatep">Picture</p>
                 <input type="text" name="picture_url" value="<%= show.picture_url%>">
-                <p>Description</p>
+                <p class="updatep">Description</p>
                 <textarea name="description" cols="30" rows="10" value="<%= show.description %>"></textarea>
-                <button type ="submit">Update</button>
+                <button class="favbtn" type ="submit">Update</button>
             </form>
         </fieldset>
     </article>
