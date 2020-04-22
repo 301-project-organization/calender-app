@@ -1,22 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HolidayFinder</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/marah.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css2?family=Bellota:wght@700&family=Fugaz+One&family=Rancho&display=swap" rel="stylesheet">
-
+    <%- include('./layout/head.ejs')%>
 </head>
 <body>
-   
-        <header>
-            <%- include('./layout/header.ejs')%>
-        </header>
-
+    <header>
+        <%- include('./layout/header.ejs')%>
+    </header>
     <main class="contOFcont">
             <% holiday.forEach((holiday,index)=>{%>
         <section class="container-marah">
@@ -28,15 +18,8 @@
         </section>
             <%})%>
     </main>
-
     <footer>
         <%- include('./layout/footer.ejs')%>
     </footer>
-
-    
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/example.js"></script>
-
 </body>
-
 </html>
