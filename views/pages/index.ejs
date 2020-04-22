@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%-include('./layout/head')%>
-    <title>Calendar App</title>
+    <%- include('./layout/head.ejs')%>
+    <link rel="stylesheet" type="text/css" href="/css/marah.css">
+<link rel="shortcut icon" href="https://cdn.iconscout.com/icon/free/png-256/calendar-date-year-event-schedule-link-holiday-5-22713.png" type="image/png" sizes="152x152">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
-        <%-include('./layout/header')%>
+        <%- include('./layout/header.ejs')%>
     </header>
-    <p>This is the index page</p>
-
-    <script src="./js/app.js"></script>
+    <main class="contOFcont">
+            <% holiday.forEach((holiday,index)=>{%>
+        <section class="container-marah">
+            <p class="name-marah"><%=holiday.name%></p>
+            <img class="img-marah" src="<%=image[index].img%>" alt="">
+            <p class="date-marah"><%=holiday.date%></p>
+            <p class="type-marah"><%=holiday.type%></p>
+            <p class="desc-marah"><%=holiday.description%></p>
+        </section>
+            <%})%>
+    </main>
+    <footer>
+        <%- include('./layout/footer.ejs')%>
+    </footer>
 </body>
 </html>

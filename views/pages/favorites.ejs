@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%-include('./layout/head')%>
+    <link rel="stylesheet" href="/css/sr.css">
+</head>
+
+<body>
+    <header>
+        <%- include('./layout/header.ejs')%>
+    </header>
+    <main>
+        <section class="favoritesResults">
+            <% holidayResults.forEach(value=>{ %>
+            <div class="favHolidays">
+                <p class="ammarTitle"><%=value.holidayname%></p>
+                <img src="<%=value.picture_url%>" alt="">
+                <button class="favbtn" onclick="window.location.href = '/details/<%=value.id%>';">View Details</button>
+            </div>
+            <%})%>
+        </section>
+    </main>
+    <footer>
+        <%- include('./layout/footer.ejs')%>
+    </footer>
+</body>
+
+</html>
