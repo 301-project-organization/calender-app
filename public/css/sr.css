@@ -27,7 +27,7 @@ body{
 
 .searchForm p{
     margin: 10px 0;
-    font-size: 24px;
+    font-size: 20px;
     text-align: left;
     margin-left: 10vw;
 }
@@ -50,6 +50,12 @@ body{
     font-size: 16px;
     padding: 10px;
 }
+.searchForm textarea{
+    background-color: #d3e2ef;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 70%;
+}
 .searchForm select{
     width: 70%;
     padding: 10px;
@@ -66,7 +72,6 @@ body{
     cursor: pointer;
     font-weight: bold;
     color: rgb(59, 59, 59);
-    text-decoration: underline;
 }
 .favHolidays img,.searchResults img{
     width: 90%;
@@ -86,6 +91,13 @@ body{
     text-align: center;
     font-size: 20px;
     margin: 20px;
+}
+
+.ammarTitle{
+    background-color: #8f8fba8c;
+    border-radius: 25px;
+    color: #2E3837;
+    padding: 5px 3px 5px 3px;
 }
 
 #resDescription{

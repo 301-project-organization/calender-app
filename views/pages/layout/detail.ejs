@@ -1,50 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="titleID">Details</title>
+  <title>HolidayFinder</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="/css/example.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bellota:wght@700&family=Fugaz+One&family=Rancho&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/sr.css">
 </head>
-<body id=bodyId style="text-align: center;">
-  <fieldset>
-  
-    <div class="row">
-      <img src = "<%= show.picture_url %>" style="width: 100%;" >
-  </div>
-  <div class="row">
-        <p> <%= show.country %> </p>
-  </div>
-  <div class="row">
-          <p> <%= show.holidayname %></p>
-  </div>
-  <div class="row">
-            <p> <%= show.description %> </p>
-  </div>
-  <div class="row">
-              <p> <%= show.date %></p>
-  </div>
-  <div class="row">
-                <p><%= show.type %></p>
-  </div>
- 
 
- <div class="row">
-  <div class="col-1">
-    <form action="/edit/<%=show.id%>" method="GET">
-      <button id="btnUpdate">Update</button>
-    </form>
- </div>
-  
-    <div class="col-2">
-    <form action="/delete/<%=show.id%>?_method=DELETE" method="POST">
-      <button id="btnDelete" >Delete</button>
-    </form>
-  </div>
- </div>
+<body>
+  <header>
+    <div class="wrapper">
+      <a href="../" class="logo"><img src="/imgs/logo2.png" alt="logo"></a>
+      <a href="" class="menu_icon" id="menu_icon" alt="menu"></a>
+      <nav id="nav_menu">
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../favorites">Favorites</a></li>
+          <li><a href="../searchform">Search</a></li>
+          <li><a href="../about">About Us</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="fb" href="https://www.facebook.com/holidayyear.calendar/"></a></li>
+        <li><a class="twitter" href="https://twitter.com/explore"></a></li>
+        <li><a class="gplus" href="https://myaccount.google.com/profile?pli=1"></a></li>
+      </ul>
+    </div>
+  </header>
+  <section class="renderResults">
+    <div class='searchResults'>
+      <img src="<%=show.picture_url%>">
+      <p> <%= show.holidayname %></p>
+      <p> <%= show.country %> </p>
+      <p> <%= show.description %> </p>
+      <p> <%= show.date %></p>
+      <p><%= show.type %></p>
+      <form action="/edit/<%=show.id%>" method="GET">
+        <button>Update</button>
+      </form>
+      <form action="/delete/<%=show.id%>?_method=DELETE" method="POST">
+        <button>Delete</button>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <img class="footerImg" src="/imgs/logooo.png" alt="footer">
+    <p class="rights">Copyright © 2020 Holiday Finder <a
+        href="https://github.com/301-project-organization/calender-app">calender-app.com</a></p>
 
-</fieldset>
-
+  </footer>
+  <script type="text/javascript" src="/js/jquery.js"></script>
+  <script type="text/javascript" src="/js/example.js"></script>
 </body>
-<link rel="stylesheet" href="/css/detailUpdate.css"  type = "text/css"/>
 
 </html>
